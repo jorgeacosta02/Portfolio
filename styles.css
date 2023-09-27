@@ -10,7 +10,7 @@
     font-family: 'Poppins', sans-serif;
 }
 :root{
-    --bg-color:  #2a2a2a;
+    --bg-color:  #121212;
     --second-bg-color: #202020;
     --text-color: #fff;
     --second-text-color: #ccc;
@@ -75,7 +75,7 @@ section{
     box-sizing: border-box;
     height: 100vh;
     padding: 10px 7% 10px;
-    transition: all 3.5s ease;
+    transition: all .5s ease;
 }
 .home-h1{
     position: relative;
@@ -153,14 +153,11 @@ section{
     letter-spacing: 1px;
     font-weight: 500;
     transition: all .5s ease;
-    /* width: 30%; */
 }
 .btn:hover{
     transform: scale(1.1)
 }
 .about{
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -203,14 +200,12 @@ section{
     font-weight: 600;
     color: var(--text-color);
     line-height: 1.7;
-    /* margin: 15px 0 30px; */
 }
 .about-text p{
     color: var(--second-text-color);
     font-size: var(--p-font);
     line-height: 1.8;
     font-family: Times New Roman, Times;
-    /* margin-bottom: 2rem; */
 }
 .div-skills{
     position: relative;
@@ -248,4 +243,79 @@ section{
     box-shadow: 20px 20px 20px rgba(0,0,0,1);
     transform:scale(1.2);
     transform-origin: center;
+}
+.div-projects{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 12vh;
+    gap: 6rem;
+    width: 75vw;
+    height: 77%;
+    top: -60vh;
+    left: 10vw;
+}
+.projects-h1{
+    position: relative;
+    bottom:-63%;
+    left: 7vw;
+    display: inline-block;
+    transform: rotate(-90deg) scaleX(0.68);
+    font-size: 9.5rem;
+    font-weight: 700;
+    width: 0%;
+    height: 70%;
+    color: rgb(79, 79, 79);
+}
+.project{
+    height: 70vh;
+    width: 34vw;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0;
+}
+.proyect h2{
+    margin-bottom: 10%;
+}
+.project img{
+    box-shadow: 10px 10px 20px black;
+}
+.craft-img{
+    width: 45%;
+    height: auto;
+}
+.project-craft{
+    align-items: center;
+}
+.project a{
+    color: var(--main-color);
+}
+.div-backgr{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 12vh;
+    gap: 6rem;
+    width: 75vw;
+    height: 77%;
+    top: -60vh;
+    left: 10vw;
+}
+.backgr-h1{
+    position: relative;
+    bottom:-63%;
+    left: 7vw;
+    display: inline-block;
+    transform: rotate(-90deg) scaleX(0.48);
+    font-size: 9.5rem;
+    font-weight: 700;
+    width: 0%;
+    height: 70%;
+    color: rgb(79, 79, 79);
 }
