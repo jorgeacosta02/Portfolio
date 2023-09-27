@@ -352,3 +352,15 @@ section{
 .efset-img{
     width: 80%;
 }
+.contact-h1{
+    position: relative;
+    bottom:-63%;
+    left: 7vw;
+    display: inline-block;
+    transform: rotate(-90deg) scaleX(0.7);
+    font-size: 9.5rem;
+    font-weight: 700;
+    width: 0%;
+    height: 70%;
+    color: rgb(79, 79, 79);
+}
