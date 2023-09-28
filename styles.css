@@ -378,11 +378,11 @@ section{
     height: 77%;
     top: -60vh;
     left: 10vw;
-    font-size: 1.35rem;
+    font-size: 1.1rem;
 }
 .contact{
     height: 70vh;
-    width: 34vw;
+    width: 28vw;
     border-radius: 10px;
     text-align: center;
     box-sizing: border-box;
@@ -396,4 +396,15 @@ section{
 }
 .link-title{
     text-align: center;
+}
+.yahoo-img{
+    height: 100%;
+    /* width: 10%; */
+}
+.yahoo{
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
 }
