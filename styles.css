@@ -268,7 +268,7 @@ section{
     border-radius: 8px;
     box-shadow: 10px 10px 20px black;
     transition: 200ms ease;
-    flex-basis: calc(14.5% - 7px);
+    flex-basis: calc(15.5% - 7px);
 }
 .sk:hover{
     box-shadow: 20px 20px 20px rgba(0,0,0,1);
