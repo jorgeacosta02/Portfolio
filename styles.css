@@ -14,7 +14,7 @@
     --second-bg-color: #202020;
     --text-color: #fff;
     --second-text-color: #ccc;
-    --main-color: #03a5e0;
+    --main-color: #ff2727e3;
     --big-font: 5rem;
     --h2-font: 3rem;
     --p-font: 1.1rem;
@@ -80,6 +80,11 @@ section{
     padding: 10px 7% 10px 15%;
     transition: all .5s ease;
 }
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
 .home-h1{
     position: absolute;
     left: -12%;
@@ -91,11 +96,6 @@ section{
     color: rgb(79, 79, 79);
     transition: all .5s ease;
     /* background-color: green; */
-}
-.home{
-    position: relative;
-    height: 100vh;
-    width: 100%;
 }
 .home-text{
     position: relative;
@@ -250,8 +250,8 @@ section{
 .div-skills{
     /* position: relative; */
     width: 70vw;
-    height: 60vh;
-    margin-top: 20vh;
+    height: 63vh;
+    margin-top: 23vh;
     margin-left: 4vw;
     display: flex;
     flex-wrap: wrap;
@@ -259,16 +259,15 @@ section{
     justify-content: space-evenly;
     align-content: space-around;
     align-items: center;
-    flex-grow: 0;
+    /* flex-grow: 1; */
     /* background-color: red; */
-
 }
 .sk{
-    width: 4vw;
+    width: 20%;
     border-radius: 8px;
     box-shadow: 10px 10px 20px black;
     transition: 200ms ease;
-    flex-basis: calc(15.5% - 7px);
+    flex-basis: calc(14% - 0px);
 }
 .sk:hover{
     box-shadow: 20px 20px 20px rgba(0,0,0,1);
@@ -279,7 +278,6 @@ section{
     position: relative;
     height: 100vh;
     width: 100%;
-    /* background-color: red; */
 }
 .projects-h1{
     position: relative;
@@ -291,20 +289,17 @@ section{
     font-weight: 700;
     color: rgb(79, 79, 79);
     transition: all .5s ease;
-    /* background-color: green; */
 }
 .div-projects{
     position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* padding-top: 12vh; */
     gap: 4rem;
     width: 80vw;
     height: 80%;
     margin-top: -55vh;
     margin-left: -1vw;
-    /* background-color: blue; */
 }
 .project{
     height: 75vh;
@@ -316,8 +311,6 @@ section{
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    /* flex-grow: 0; */
-    /* background-color: green; */
 }
 .proyect h2{
     margin-bottom: 10%;
@@ -333,70 +326,63 @@ section{
     width: auto;
     height: 27vh;
 }
-/* .project-craft{
-    align-items: center;
-} */
 .project a{
     color: var(--main-color);
 }
-.div-backgr{
+.background{
     position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-top: 12vh;
-    gap: 6rem;
-    width: 75vw;
-    height: 77%;
-    top: -60vh;
-    left: 10vw;
+    height: 100vh;
+    width: 100%;
+    /* background-color: blue; */
 }
-.backgr-h1{
+.background-h1{
     position: relative;
-    bottom:-63%;
-    left: 7vw;
+    margin-left: -50vw;
+    margin-top: 19.5%;
     display: inline-block;
-    transform: rotate(-90deg) scaleX(0.48);
+    transform: rotate(-90deg)  scaleX(0.47);
     font-size: 9.5rem;
     font-weight: 700;
-    width: 0%;
-    height: 70%;
     color: rgb(79, 79, 79);
+    transition: all .5s ease;
+    /* background-color: green; */
 }
-.div-backgrs{
+.div-background{
     position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 3rem;
-    width: 65vw;
+    width: 75vw;
     height: 85%;
-    top: -55vh;
-    left: 10vw;
+    margin-left: 3vw;
+    margin-top: -59vh;
+    /* background-color: red; */
 }
 .backgr{
-    height: 70vh;
-    width: 100vw;
-    border-radius: 10px;
-    align-items: center;
-    text-align: center;
-    box-sizing: border-box;
+    position: relative;
     display: flex;
+    text-align: center;
     flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 0;
-    background-color: rgb(34, 34, 34);
-    box-shadow: 10px 10px 20px black;
-    padding: 3vh 1vw;
-    
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    width: 30%;
+    height: 80vh;
+    border-radius: 2vw;
+    padding: 2vw;
+    background-color: rgb(46, 46, 46);
 }
 .soyHenry-img{
-    width: 80%;
+    width: 90%;
 }
 .efset-img{
-    width: 80%;
+    width: 70%;
 }
-.contact-h1{
+.unsj-img{
+    width: 70%;
+}
+/* .contact-h1{
     position: relative;
     bottom:-63%;
     left: 7vw;
@@ -407,8 +393,8 @@ section{
     width: 0%;
     height: 70%;
     color: rgb(79, 79, 79);
-}
-.div-contacts{
+} */
+/* .div-contacts{
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -420,8 +406,8 @@ section{
     top: -60vh;
     left: 10vw;
     font-size: 1.1rem;
-}
-.contact{
+} */
+/* .contact{
     height: 70vh;
     width: 32vw;
     border-radius: 10px;
@@ -431,8 +417,8 @@ section{
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 0;
-}
-.links{
+} */
+/* .links{
     text-align: left;
 }
 .link-title{
@@ -440,14 +426,12 @@ section{
 }
 .yahoo-img{
     height: 100%;
-    /* width: 10%; */
 }
 .yahoo{
     height: 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: red; */
 }
 .linkedin-img{
     height: 28vh;
@@ -457,5 +441,4 @@ section{
     width: 100%;
     display: flex;
     justify-content: space-between;
-
-}
+} */
