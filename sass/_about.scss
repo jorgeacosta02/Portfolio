@@ -1,0 +1,61 @@
+@use "variables";
+@use "mixinsfunc";
+
+.about{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.about-h1{
+    position: absolute;
+    left: -14.7vw;
+    top: 35%;
+    display: inline-block;
+    transform: rotate(-90deg);
+    font-size: 9.5rem;
+    font-weight: 700;
+    color: rgb(79, 79, 79);
+    transition: all .5s ease;
+
+}
+
+.about-text {
+    position: relative;
+    height: 70vh;
+    width: 70vw;
+    @include mixinsfunc.create-flexbox(row, space-between);
+    gap: 2rem;
+    left: 18vw;
+    top: 18vh;
+    gap: 5rem;
+}
+
+.about-img{
+    height: 100%;
+    border-radius: 10px;
+}
+
+.about-data {
+    height: 100%;
+    @include mixinsfunc.create-flexbox(column, space-between);
+    align-items: flex-start;
+}
+
+.about-text h2{
+    font-size: variables.$h2-font-size;
+    line-height: 1;
+}
+
+.about-text h4{
+    font-size: 24px;
+    font-weight: 600;
+    color: variables.$h2-font-size;
+    line-height: 1.7;
+}
+.about-text p{
+    color: variables.$second-text-color;
+    font-size: variables.$p-font-size;
+    line-height: 1.8;
+    font-family: Times New Roman, Times;
+}

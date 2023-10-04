@@ -1,0 +1,26 @@
+@use "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: variables.$bg-color;
+    color: variables.$text-color;
+}
+a {
+    color: variables.$main-color;
+}
+span{
+    color: variables.$main-color;
+}
+section{
+    box-sizing: border-box;
+    height: 100vh;
+    transition: all .5s ease;
+}
