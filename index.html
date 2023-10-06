@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/style.css"/>
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" href="/img/favicon/favicon-32x32.png" class="favicon">
 </head>
 <body>
     <header class="header">
@@ -19,6 +20,7 @@
             <li><a href="#background">Background</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="bx bx-menu"></div>
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
@@ -76,9 +78,10 @@
             <img src="/img/Explress1.png" class="sk"/>
             <img src="/img/Sequelize.png" class="sk"/>
             <img src="/img/PosgreSQL2.png" class="sk"/>
-            <img src="/img/Bootstrap.png" class="sk"/>
             <img src="/img/git-1.png" class="sk"/>
             <img src="/img/GitHub-Mark.png" class="sk"/>
+            <img src="/img/Bootstrap.png" class="sk"/>
+            <img src="/img/sass1.webp" class="sk"/>
             <img src="/img/Agile.png" class="sk"/>
         </div>
     </section>
@@ -138,21 +141,42 @@
                 <div class="link-title">
                     <h2>Links</h2>
                 </div>
-                <div class="yahoo">
-                    <img src="/img/Yahoo2.jpg" class="yahoo-img"/>
-                    <p> jorgeacostadeleon@yahoo.com</p>
+                <div class="link-div">
+                        <!-- <div class="yahoo">
+                            <img src="/img/Yahoo2.jpg" class="yahoo-img"/>
+                        <p> jorgeacostadeleon@yahoo.com</p>
+                    </div> -->
+                    <a href="https://www.linkedin.com/in/jorge-enrique-acosta-de-le%C3%B3n-8934a4122/" target="_blank"  class="link-button">
+                        <img src="/img/LinkedIn_icon.svg.png" class="link-img-text"/>
+                    </a>
+                    <a href="https://github.com/jorgeacosta02" target="_blank" class="link-button github">
+                        <img src="/img/GitHub-Mark.png" class="link-img-text"/>
+                    </a>
+                    <a href="https://github.com/jorgeacosta02/Resume/raw/main/Resume Jorge Acosta.pdf" download="Mi_CV.pdf" target="_blank" class="resume-button"><h2 class="link-img-text resume-text">Download Resume</h2></a>
                 </div>
-                <a href="https://www.linkedin.com/in/jorge-enrique-acosta-de-le%C3%B3n-8934a4122/" target="_blank"  class="link-button">
-                    <img src="/img/LinkedIn_icon.svg.png" class="link-img-text"/>
-                </a>
-                <a href="https://github.com/jorgeacosta02" target="_blank" class="link-button github">
-                    <img src="/img/GitHub-Mark.png" class="link-img-text"/>
-                </a>
-                <a href="https://github.com/jorgeacosta02/Resume/raw/main/Resume Jorge Acosta.pdf" download="Mi_CV.pdf" target="_blank" class="link-button resume"><h2 class="link-img-text resume-text">Download Resume</h2></a>
             </div>
             <div class="links">
                 <div class="link-title">
-                    <h2>Contact <span>me</span></h2>
+                    <h2 class="contact-me">Contact <span>me</span></h2>
+                    <div>
+                        <input type="submit" value="Submit"  class="button">
+                    </div>
+                </div>
+                <div class="link-div">
+                    <form id="contactForm" class="form">
+                        <div class="form-block">
+                            <label for="nombre">Name:</label>
+                            <input type="text" id="name" name="name" required class="form-in">
+                        </div>
+                        <div class="form-block">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required class="form-in">
+                        </div>
+                        <div class="form-block">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required class="form-in"></textarea>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

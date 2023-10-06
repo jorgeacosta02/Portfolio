@@ -1,4 +1,5 @@
 @use "variables";
+@use "general";
 
 header{
     position: fixed;
@@ -34,6 +35,7 @@ header{
         }
         &:active{
             color: variables.$active-color;
+            transition: all .001s ease;
         }
     }
     }

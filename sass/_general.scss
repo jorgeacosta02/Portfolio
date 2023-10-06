@@ -22,5 +22,9 @@ span{
 section{
     box-sizing: border-box;
     height: 100vh;
+    width: 100vw;
     transition: all .5s ease;
+}
+.favicon{
+    border-radius: 50%;
 }

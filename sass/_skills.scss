@@ -1,0 +1,46 @@
+@use "variables";
+@use "mixinsfunc";
+@use "general";
+
+.skills{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.skills-h1{
+    position: absolute;
+    left: -13%;
+    top: 35%;
+    display: inline-block;
+    transform: rotate(-90deg);
+    font-size: 9.5rem;
+    font-weight: 700;
+    color: rgb(79, 79, 79);
+    transition: all .5s ease;
+}
+.div-skills{
+    position: relative;
+    width: 70vw;
+    height: 63vh;
+    top: 22vh;
+    left: 19vw;
+    gap: 2rem;
+
+    @include mixinsfunc.create-flexbox(row, space-between);
+
+    align-content: space-around;
+    flex-wrap: wrap;
+    /* background-color: red; */
+}
+.sk{
+    width: 20%;
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px black;
+    transition: 200ms ease;
+    flex-basis: calc(14% - 0px);
+    &:hover{
+        box-shadow: 20px 20px 20px rgba(0,0,0,1);
+        transform:scale(1.2);
+        transform-origin: center;
+    }
+}

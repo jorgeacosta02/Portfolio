@@ -1,0 +1,121 @@
+@use "variables";
+@use "mixinsfunc";
+@use "general";
+
+.contact{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.contact-h1{
+    position: relative;
+    left: -23vw;
+    top: 37vh;
+    display: inline-block;
+    transform: rotate(-90deg)  scaleX(0.7);
+    font-size: 9.5rem;
+    font-weight: 700;
+    color: variables.$grey-color;
+    transition: all .5s ease;
+}
+.div-contacts{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+    width: 75vw;
+    height: 77vh;
+    top: -20vh;
+    left: 17vw;
+    font-size: 1.1rem;
+    // background-color: red;
+}
+.links{
+    box-sizing: border-box;
+    text-align: left;
+    height: 90%;
+    width: 40%;
+    @include mixinsfunc.create-flexbox(column, center);
+    gap: 1rem;
+    border-radius: 1vw;
+    color: variables.$text-color;
+    border: 1px solid variables.$grey-color;
+    // background-color: blue;
+}
+.link-title{
+    width: 80%;
+    text-align: center;
+    margin-bottom: 2%;
+    @include mixinsfunc.create-flexbox(row, space-between);
+    // background-color: green;
+}
+.contact-me{
+    display: inline-block;
+    // width: 60%;
+    // background-color: orange;
+}
+.link-div{
+    height: 70%;
+    // background-color: yellow;
+    width: 80%;
+    @include mixinsfunc.create-flexbox(column, space-evenly);
+    & a{
+        height: 20%;
+        width: 100%;
+        @include mixinsfunc.create-flexbox(column, center);
+        border-radius: 9px;
+        cursor: pointer;
+        border: 1px solid variables.$grey-color;
+        // background-color: aqua;
+        font-size: .75rem;
+    }
+    & img{
+        height: 7vh;
+        top: 10%;
+    }
+    // & h2{
+    //     margin-top: .5%;
+    //     // padding: 0;
+    //     // color: variables.$main-color;
+    // }
+}
+.github{
+    border: 1px solid white;
+}
+// .resume{
+//     border: 1px solid rgb(107, 107, 107);
+//     align-items: center;
+//     font-size: .9rem;
+// }
+.form{
+    width: 100%;
+    @include mixinsfunc.create-flexbox(column, center);
+    gap: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.form-block{
+    width: 100%;
+    @include mixinsfunc.create-flexbox(column, center);
+    
+}
+.form-in{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid variables.$grey-color;
+    color: variables.$grey-color;
+    background-color: variables.$bg-color;
+    color: variables.$text-color;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    box-sizing: border-box;
+    padding: 1vh .5vw;
+}
+input{
+    height: 5vh;
+}
+textarea{
+    height: 20vh;
+
+}

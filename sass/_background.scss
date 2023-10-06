@@ -1,0 +1,53 @@
+@use "variables";
+@use "mixinsfunc";
+@use "general";
+
+.background{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.background-h1{
+    position: relative;
+    left: -35.3vw;
+    top: 36vh;
+    display: inline-block;
+    transform: rotate(-90deg)  scaleX(0.47);
+    font-size: 9.5rem;
+    font-weight: 700;
+    color: rgb(79, 79, 79);
+    transition: all .5s ease;
+}
+.div-background{
+    position: relative;
+    @include mixinsfunc.create-flexbox(row, space-evenly);
+    gap: 3rem;
+    width: 75vw;
+    height: 85%;
+    left: 16vw;
+    top: -27vh;
+    /* background-color: red; */
+}
+.backgr{
+    position: relative;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    width: 30%;
+    height: 80vh;
+    border-radius: 2vw;
+    padding: 2vw;
+    background-color: rgb(46, 46, 46);
+}
+.soyHenry-img{
+    width: 90%;
+}
+.efset-img{
+    width: 70%;
+}
+.unsj-img{
+    width: 70%;
+}

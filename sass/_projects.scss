@@ -1,0 +1,53 @@
+@use "variables";
+@use "mixinsfunc";
+@use "general";
+
+.projects{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.projects-h1{
+    position: relative;
+    left: -24vw;
+    top: 36vh;
+    display: inline-block;
+    transform: rotate(-90deg)  scaleX(0.65);
+    font-size: 9.5rem;
+    font-weight: 700;
+    color: rgb(79, 79, 79);
+    transition: all .5s ease;
+}
+.div-projects{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+    width: 80vw;
+    height: 70%;
+    top: -20vh;
+    left: 13vw;
+}
+.project{
+    height: 75vh;
+    width: 45vw;
+    border-radius: 10px;
+    box-sizing: border-box;
+    @include mixinsfunc.create-flexbox(column, space-between);
+    text-align: center;
+    & h2{
+        margin-bottom: 10%;
+    }
+    & img{
+        box-shadow: 10px 10px 20px black;
+    }
+}
+.video-img{
+    width: auto;
+    height: 27vh;
+}
+.craft-img{
+    width: auto;
+    height: 27vh;
+}
