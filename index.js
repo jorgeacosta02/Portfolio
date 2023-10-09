@@ -1,8 +1,14 @@
+// console.log("index.js loaded");
+
 document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.getElementById("contactForm");
 
+    // console.log("entrando a la función");
+
     contactForm.addEventListener("submit", function(event) {
         event.preventDefault();
+
+        // console.log("Form submitted");
 
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
@@ -15,25 +21,31 @@ document.addEventListener("DOMContentLoaded", function() {
             message: message
         };
 
+        // console.log('data: ',data);
         // Enviar los datos al servidor Node.js
-        fetch("/enviar-correo", {
+        fetch("http://127.0.0.1:3000/send-correo", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
         })
-        .then(response => response.json())
+        .then(console.log('then after fetch'))
+        .then(response => response.json()) // Parsea la respuesta como JSON
         .then(data => {
             if (data.success) {
-                alert("Mensaje enviado correctamente");
+                alert("Message sent successfully");
                 contactForm.reset();
             } else {
-                alert("Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.");
+                // console.log('inside fetch'),
+                alert("Error sending message. Please, try it again later.");
             }
         })
+        // .then(console.log('just before catch'));
         .catch(error => {
-            alert("Hubo un error en la solicitud. Por favor, inténtalo de nuevo más tarde.");
+            // console.log('inside fetch catch');
+            alert("There was an error in the request. Please, try it again later.");
+            console.log(error);
         });
     });
 });
