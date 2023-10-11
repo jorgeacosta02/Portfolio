@@ -30,6 +30,7 @@
     left: 18vw;
     top: 18vh;
     gap: 5rem;
+    // background-color: red;
 }
 
 .about-img{
@@ -39,8 +40,10 @@
 
 .about-data {
     height: 100%;
+    width: 40%;
     @include mixinsfunc.create-flexbox(column, space-between);
     align-items: flex-start;
+    // background-color: blue;
 }
 
 .about-text h2{

@@ -43,31 +43,36 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 22px 5%;
+  padding: 0vw;
   border-bottom: 1px solid transparent;
   transition: all 0.5s ease;
+  background-color: #121212;
 }
 
 .logo {
   color: #fff;
-  font-size: 30px;
+  font-size: 2.7vw;
   font-weight: 700;
   letter-spacing: 3px;
-  width: 30%;
+  left: -1vw;
 }
 
 .navlist {
   display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70%;
 }
 .navlist a {
   color: #ccc;
-  font-size: 17px;
+  font-size: 1.5vw;
   font-weight: 500;
-  margin: 0 25px;
   transition: all 0.45s ease;
 }
 .navlist a:hover {
   color: rgb(255, 39, 39);
+  width: auto;
 }
 .navlist a:active {
   color: rgb(241, 241, 9);
@@ -75,14 +80,31 @@ header {
 }
 
 #menu-icon {
+  display: none;
   font-size: 35px;
-  color: var(--text-color);
+  width: 5vw;
+  color: red;
   z-index: 1000;
   cursor: pointer;
-  margin-left: 325px;
-  display: none;
+  margin-right: 10%;
 }
 
+@media (max-width: 600px) {
+  #menu-icon {
+    display: block;
+  }
+  .navlist {
+    display: none;
+    with: 70%;
+  }
+  .logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 80%;
+  }
+}
 .home {
   position: relative;
   height: 100vh;
@@ -219,6 +241,7 @@ header {
 
 .about-data {
   height: 100%;
+  width: 40%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -418,7 +441,7 @@ header {
 .contact-h1 {
   position: relative;
   left: -23vw;
-  top: 37vh;
+  top: 36vh;
   display: inline-block;
   transform: rotate(-90deg) scaleX(0.7);
   font-size: 9.5rem;
