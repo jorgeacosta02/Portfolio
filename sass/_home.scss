@@ -1,57 +1,70 @@
 @use "variables";
 @use "general";
+@use "mixinsfunc";
 
-.home{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-}
+// .home{
+//     position: relative;
+//     height: 100vh;
+//     width: 100%;
+// }
 .home-h1{
     position: absolute;
-    left: -12vw;
-    top: 35vh;
+    width: 20px;
+    height: 30vw;
+    // left: -12vw;
+    // top: 35vh;
     display: inline-block;
-    transform: rotate(-90deg);
+    // transform: rotate(-45deg);
     font-size: 9.5rem;
     font-weight: 700;
     color: rgb(79, 79, 79);
     transition: all .5s ease;
+    background-color: blue;
 }
 .home-text{
-    position: absolute;
-    height: 50vh;
-    width: 60vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    // position: absolute;
+    // height: 50vh;
+    width: 70vw;
+    @include mixinsfunc.create-flexbox(row, space-between);
     gap: 2rem;
-    left: 22vw;
+    left: 22%;
     top: 28vh;
-    & h1{
-        font-size: variables.$big-font-size;
-        font-weight: 700;
-        color: variables.$text-color;
-        line-height: 1.1;
-        margin: 0 0 8px;
-    }
-    & h3{
-        color: variables.$text-color;
-        margin: 0 0 35px;
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 1.1;
+    // background-color: blue;
+    .home-data{
+        width: 50vw;
+        @include mixinsfunc.create-flexbox(column, space-evenly);
+        align-items: flex-start;
+        gap: 2vw;
+        // background-color: grey;
+        // align-content: flex-start;
+        & h1{
+            font-size: variables.$big-font-size;
+            font-weight: 700;
+            color: variables.$text-color;
+            // line-height: 2;
+            // margin: 0 0 8px;
+        }
+        & h3{
+            color: variables.$text-color;
+            // margin: 0 0 35px;
+            font-size: 2rem;
+            font-weight: 700;
+            // line-height: 3;
+        }
+        & span{
+            font-size: 6vh;
+            font-weight: 700;
+        }
     }
     & img{
-        height: 50vh;
+        height: 60vh;
         border-radius: 5px;
     }
+
 }
-.home-data{
-    width: 90vw;
-}
-.slide{
-    margin-bottom: 20px;
-}
+// .slide{
+//     margin-bottom: 20px;
+// }
 .one{
     display: inline-block;
     margin-right: 15px;

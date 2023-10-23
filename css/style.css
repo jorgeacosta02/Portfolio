@@ -10,6 +10,8 @@
 }
 
 body {
+  padding: 0;
+  margin: 0;
   background-color: #121212;
   color: #fff;
 }
@@ -24,9 +26,15 @@ span {
 
 section {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   height: 100vh;
   width: 100vw;
   transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .favicon {
@@ -43,7 +51,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 0vw;
+  padding-left: 2vw;
   border-bottom: 1px solid transparent;
   transition: all 0.5s ease;
   background-color: #121212;
@@ -105,60 +113,54 @@ header {
     width: 80%;
   }
 }
-.home {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-}
-
 .home-h1 {
   position: absolute;
-  left: -12vw;
-  top: 35vh;
+  width: 20px;
+  height: 30vw;
   display: inline-block;
-  transform: rotate(-90deg);
   font-size: 9.5rem;
   font-weight: 700;
   color: rgb(79, 79, 79);
   transition: all 0.5s ease;
+  background-color: blue;
 }
 
 .home-text {
-  position: absolute;
-  height: 50vh;
-  width: 60vw;
+  width: 70vw;
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: space-between;
   gap: 2rem;
-  left: 22vw;
+  left: 22%;
   top: 28vh;
 }
-.home-text h1 {
+.home-text .home-data {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 2vw;
+}
+.home-text .home-data h1 {
   font-size: 5rem;
   font-weight: 700;
   color: #fff;
-  line-height: 1.1;
-  margin: 0 0 8px;
 }
-.home-text h3 {
+.home-text .home-data h3 {
   color: #fff;
-  margin: 0 0 35px;
   font-size: 2rem;
   font-weight: 700;
-  line-height: 1.1;
+}
+.home-text .home-data span {
+  font-size: 6vh;
+  font-weight: 700;
 }
 .home-text img {
-  height: 50vh;
+  height: 60vh;
   border-radius: 5px;
-}
-
-.home-data {
-  width: 90vw;
-}
-
-.slide {
-  margin-bottom: 20px;
 }
 
 .one {

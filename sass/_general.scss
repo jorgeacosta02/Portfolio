@@ -1,4 +1,5 @@
 @use "variables";
+@use "mixinsfunc";
 
 * {
     margin: 0;
@@ -10,6 +11,8 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
+    padding: 0;
+    margin: 0;
     background-color: variables.$bg-color;
     color: variables.$text-color;
 }
@@ -21,9 +24,13 @@ span{
 }
 section{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     height: 100vh;
     width: 100vw;
     transition: all .5s ease;
+    @include mixinsfunc.create-flexbox(row, center);
+    // background-color: yellow;
 }
 .favicon{
     border-radius: 50%;
