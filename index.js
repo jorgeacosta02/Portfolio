@@ -49,3 +49,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// Show menu in mobile
+
+const toggleButton = document.querySelector(".toggleButton");
+const navlist = document.querySelector(".navlist");
+
+toggleButton.addEventListener("click", () => {
+    navlist.classList.toggle("navlist_visible");
+})

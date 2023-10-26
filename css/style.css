@@ -14,6 +14,7 @@ body {
   margin: 0;
   background-color: #121212;
   color: #fff;
+  background-color: yellow;
 }
 
 a {
@@ -30,11 +31,11 @@ section {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  transition: all 0.5s ease;
   display: flex;
-  align-items: center;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  background-color: grey;
 }
 
 .favicon {
@@ -44,37 +45,41 @@ section {
 header {
   position: fixed;
   width: 100%;
-  height: 12vh;
+  height: 70px;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding-left: 2vw;
-  border-bottom: 1px solid transparent;
-  transition: all 0.5s ease;
   background-color: #121212;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   color: #fff;
-  font-size: 2.7vw;
+  font-size: max(2.7vw, 20px);
   font-weight: 700;
-  letter-spacing: 3px;
-  left: -1vw;
+  letter-spacing: 0.2vw;
+  padding-left: 2vw;
+  width: 31%;
+  line-height: 70px;
 }
 
 .navlist {
   display: flex;
-  align-items: center;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw;
   width: 70%;
 }
 .navlist a {
   color: #ccc;
-  font-size: 1.5vw;
+  font-size: max(1.5vw, 13px);
   font-weight: 500;
   transition: all 0.45s ease;
 }
@@ -84,7 +89,11 @@ header {
 }
 .navlist a:active {
   color: rgb(241, 241, 9);
-  transition: all 0.001s ease;
+  transition: all 0s;
+}
+
+.toggleButton {
+  display: none;
 }
 
 #menu-icon {
@@ -100,17 +109,47 @@ header {
 @media (max-width: 600px) {
   #menu-icon {
     display: block;
+    width: 20px;
+  }
+  .nav {
+    height: 50px;
   }
   .navlist {
-    display: none;
-    with: 70%;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 50%;
+    background-color: #202020;
+    position: fixed;
+    padding: 40px 0;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    left: 100%;
+    transition: left 0.3s;
   }
   .logo {
     color: #fff;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: min(8vw, 23px);
+    font-weight: 700;
     letter-spacing: 1px;
     width: 80%;
+    height: 50px;
+    line-height: 50px;
+  }
+  .header {
+    height: 50px;
+  }
+  .navlist_visible {
+    left: 0;
+  }
+  .toggleButton {
+    display: inline-block;
+    background: none;
+    border: none;
+    width: 20px;
+    margin-right: 20px;
   }
 }
 .home-h1 {
@@ -126,37 +165,58 @@ header {
 }
 
 .home-text {
-  width: 70vw;
+  height: 50vh;
+  width: 60vw;
+  min-width: 400px;
   display: flex;
-  align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  gap: 2rem;
-  left: 22%;
+  align-items: center;
+  gap: 1rem;
   top: 28vh;
+  background-color: blue;
+}
+@media only screen and (max-width: 480px) {
+  .home-text {
+    background-color: green;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .home-text {
+    background-color: red;
+  }
 }
 .home-text .home-data {
   width: 50vw;
+  height: 60vh;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   align-items: flex-start;
   gap: 2vw;
+  background-color: grey;
 }
 .home-text .home-data h1 {
   font-size: 5rem;
   font-weight: 700;
   color: #fff;
+  flex: 1;
+  flex-shrink: 1;
+  max-width: 100%;
 }
 .home-text .home-data h3 {
   color: #fff;
   font-size: 2rem;
   font-weight: 700;
+  width: max-content;
 }
 .home-text .home-data span {
-  font-size: 6vh;
+  font-size: 3vw;
   font-weight: 700;
+  flex: 1;
+  flex-shrink: 1;
+  max-width: 100%;
 }
 .home-text img {
   height: 60vh;
@@ -227,9 +287,9 @@ header {
   height: 70vh;
   width: 70vw;
   display: flex;
-  align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
   left: 18vw;
   top: 18vh;
@@ -245,9 +305,9 @@ header {
   height: 100%;
   width: 40%;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   align-items: flex-start;
 }
 
@@ -296,9 +356,9 @@ header {
   left: 19vw;
   gap: 2rem;
   display: flex;
-  align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   align-content: space-around;
   flex-wrap: wrap;
   /* background-color: red; */
@@ -353,9 +413,9 @@ header {
   border-radius: 10px;
   box-sizing: border-box;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   text-align: center;
 }
 .project h2 {
@@ -396,9 +456,9 @@ header {
 .div-background {
   position: relative;
   display: flex;
-  align-items: center;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   gap: 3rem;
   width: 75vw;
   height: 85%;
@@ -471,9 +531,9 @@ header {
   height: 90%;
   width: 40%;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   border-radius: 1vw;
   color: #fff;
@@ -485,9 +545,9 @@ header {
   text-align: center;
   margin-bottom: 2%;
   display: flex;
-  align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .contact-me {
@@ -498,17 +558,17 @@ header {
   height: 70%;
   width: 80%;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 .link-div a {
   height: 20%;
   width: 100%;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-radius: 9px;
   cursor: pointer;
   border: 1px solid rgb(79, 79, 79);
@@ -526,9 +586,9 @@ header {
 .form {
   width: 100%;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -536,9 +596,9 @@ header {
 .form-block {
   width: 100%;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .form-in {
