@@ -50,11 +50,45 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+
 // Show menu in mobile
 
 const toggleButton = document.querySelector(".toggleButton");
 const navlist = document.querySelector(".navlist");
+const homeBut = document.querySelector(".home-but");
+const aboutBut = document.querySelector(".about-but");
+const skillsBut = document.querySelector(".skills-but");
+const projectsBut = document.querySelector(".projects-but");
+const bgBut = document.querySelector(".bg-but");
+const contactBut = document.querySelector(".contact-but");
 
 toggleButton.addEventListener("click", () => {
     navlist.classList.toggle("navlist_visible");
-})
+});
+
+homeBut.addEventListener("click", () => {
+    navlist.classList.toggle("navlist_visible");
+});
+
+aboutBut.addEventListener("click", () => {
+    navlist.classList.toggle("navlist_visible");
+});
+
+skillsBut.addEventListener("click", () => {
+    navlist.classList.toggle("navlist_visible");
+});
+
+projectsBut.addEventListener("click", () => {
+    navlist.classList.toggle("navlist_visible");
+});
+
+bgBut.addEventListener("click", () => {
+    navlist.classList.toggle("navlist_visible");
+});
+
+contactBut.addEventListener("click", () => {
+    navlist.classList.toggle("navlist_visible");
+});
+
+
