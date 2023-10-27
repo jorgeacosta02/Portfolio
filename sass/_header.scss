@@ -42,7 +42,7 @@ header{
     a{
         color: variables.$second-text-color;
         // font-size: 1.5vw;
-        font-size: max(#{1.5vw}, #{13px});
+        font-size: max(#{1.5vw}, #{10px});
         font-weight: 500;
         // margin: 0 10%;
         transition: all .45s ease;
@@ -61,7 +61,6 @@ header{
     display: none;
 }
 #menu-icon{
-    display: none;
     font-size: 35px;
     width: 5vw;
     color: red;
@@ -71,13 +70,6 @@ header{
 }
 
 @media (max-width: 600px){
-    // section{
-    //     background-color: white;
-    // }
-    #menu-icon{
-        display: block;
-        width: 20px;
-    }
     .nav{
         height: 50px;
     }
@@ -118,6 +110,6 @@ header{
         background: none;
         border: none;
         width: 20px;
-        margin-right: 20px;
+        margin-right: 30px;
     }
 }
