@@ -1,5 +1,5 @@
 @mixin display-small {
-    @media only screen and (max-width: 480px){
+    @media only screen and (max-width: 576px){
         @content;
     }
 }
@@ -10,3 +10,8 @@
     }
 }
 
+// Extra Small (xs): This applies to screens smaller than 576px in width.
+// Small (sm): This applies to screens with a width equal to or greater than 576px.
+// Medium (md): This applies to screens with a width equal to or greater than 768px.
+// Large (lg): This applies to screens with a width equal to or greater than 992px.
+// Extra Large (xl): This applies to screens with a width equal to or greater than 1200px.

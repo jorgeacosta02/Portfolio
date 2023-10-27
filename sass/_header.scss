@@ -1,6 +1,7 @@
 @use "variables";
 @use "general";
 @use "mixinsfunc";
+@use "breakpoints";
 
 header{
     position: fixed;
@@ -16,29 +17,56 @@ header{
     // border-bottom: 1px solid transparent;
     // transition: all .5s ease;
     background-color: variables.$bg-color;
+    @include breakpoints.display-small{
+        height: 50px;
+    }    
     // background-color: green;
 }
 .nav{
     @include mixinsfunc.create-flexbox(row, space-between);
     // background-color: rgb(21, 94, 94);
+    @include breakpoints.display-small{
+        height: 50px;
+    }
 }
 .logo{
-    // display: none;
     color: variables.$text-color;
-    font-size: max(#{2.7vw}, #{20px});
+    font-size: max(#{2.7vw}, #{18px});
     font-weight: 700;
     letter-spacing: 0.2vw;
     padding-left: 2vw;
     width: 31%;
-    // text-align: center;
     line-height: 70px;
+    @include breakpoints.display-small{
+        color: variables.$text-color;
+        font-size: min(#{8vw}, #{20px});
+        font-weight: 700;
+        letter-spacing: 1px;
+        width: 80%;
+        height: 50px;
+        line-height: 50px;
+    }
     // background-color: rgb(97, 97, 42);
 }
 .navlist{
     @include mixinsfunc.create-flexbox(row, space-between);
     padding: 0 2vw;
     width: 70%;
-    // background-color: blue;
+    @include breakpoints.display-small{
+        box-sizing: border-box;
+        flex-direction: column;
+        width:50%;
+        background-color: variables.$second-bg-color;
+        position: fixed;
+        padding: 40px 0;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
     a{
         color: variables.$second-text-color;
         // font-size: 1.5vw;
@@ -59,6 +87,13 @@ header{
 }
 .toggleButton{
     display: none;
+    @include breakpoints.display-small{
+        display: inline-block;
+        background: none;
+        border: none;
+        width: 20px;
+        margin-right: 30px;
+    }
 }
 #menu-icon{
     font-size: 35px;
@@ -68,48 +103,13 @@ header{
     cursor: pointer;
     margin-right: 10%;
 }
-
-@media (max-width: 600px){
-    .nav{
-        height: 50px;
-    }
-    .navlist{
-        box-sizing: border-box;
-        flex-direction: column;
-        width:50%;
-        background-color: variables.$second-bg-color;
-        position: fixed;
-        padding: 40px 0;
-        // line-height: 20px;
-        top: 50px;
+.navlist_visible{
+    @include breakpoints.display-small{
         left: 0;
-        width: 100%;
-        height: calc(100vh - 50px);
-        overflow-y: auto;
-        left: 100%;
-        transition: left 0.3s;
-    }
-    .logo{
-        color: variables.$text-color;
-        // font-size: 7vw;
-        font-size: min(#{8vw}, #{23px});
-        font-weight: 700;
-        letter-spacing: 1px;
-        width: 80%;
-        height: 50px;
-        line-height: 50px;
-    }
-    .header{
-        height: 50px;
-    }
-    .navlist_visible{
-        left: 0;
-    }
-    .toggleButton{
-        display: inline-block;
-        background: none;
-        border: none;
-        width: 20px;
-        margin-right: 30px;
     }
 }
+
+    
+
+ 
+
