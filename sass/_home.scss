@@ -23,21 +23,21 @@
 //     background-color: blue;
 // }
 .home-text{
-    margin-top: 10vh;
+    @include mixinsfunc.create-flexbox(column, space-between);
+    margin-top: 5vh;
     height: 300px;
     width: 60vw;
     min-width: 500px;
     gap: 1rem;
-    @include mixinsfunc.create-flexbox(row, space-between);
-    background-color: green;
+    // background-color: green;
     @include breakpoints.display-small{
-        background-color: aqua;
-        margin-top: 10vh;
+        // background-color: aqua;
+        @include mixinsfunc.create-flexbox(row, space-between);
+        margin-top: 5%;
         height: 300px;
         width: 60vw;
         min-width: 500px;
         gap: 1rem;
-        @include mixinsfunc.create-flexbox(row, space-between);
     }
     
     .home-small{
