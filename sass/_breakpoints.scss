@@ -1,11 +1,18 @@
-@mixin display-small {
-    @media only screen and (max-width: 576px){
+@mixin display-medium {
+    @media only screen and (min-width: 768px){
         @content;
     }
 }
 
+@mixin display-small {
+    @media only screen and (min-width: 576px){
+        @content;
+    }
+}
+
+
 @mixin display-tiny {
-    @media only screen and (max-width: 320px){
+    @media only screen and (min-width: 320px){
         @content;
     }
 }

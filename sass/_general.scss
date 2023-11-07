@@ -25,13 +25,14 @@ span{
 }
 section{
     box-sizing: border-box;
-    padding: 0;
+    padding: 85px 0;
     margin: 0;
-    height: 100vh;
     width: 100vw;
-    // transition: all .5s ease;
+    height: 600px;
+    transition: all .5s ease;
     @include mixinsfunc.create-flexbox(row, center);
-    // background-color: grey;
+    align-items: start;
+    // background-color: greenyellow;
 }
 .favicon{
     border-radius: 50%;

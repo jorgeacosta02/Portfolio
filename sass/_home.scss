@@ -8,82 +8,66 @@
 //     height: 100vh;
 //     width: 100%;
 // }
-.home-h1{
-    position: absolute;
-    width: 20px;
-    height: 30vw;
-    // left: -12vw;
-    // top: 35vh;
-    display: inline-block;
-    // transform: rotate(-45deg);
-    font-size: 9.5rem;
-    font-weight: 700;
-    color: rgb(79, 79, 79);
-    transition: all .5s ease;
-    background-color: blue;
-}
+// .home-h1{
+//     position: absolute;
+//     width: 20px;
+//     height: 30vw;
+//     // left: -12vw;
+//     // top: 35vh;
+//     display: inline-block;
+//     // transform: rotate(-45deg);
+//     font-size: 9.5rem;
+//     font-weight: 700;
+//     color: rgb(79, 79, 79);
+//     transition: all .5s ease;
+//     background-color: blue;
+// }
 .home-text{
-    // position: absolute;
-    height: 50vh;
+    margin-top: 10vh;
+    height: 300px;
     width: 60vw;
-    min-width: 400px;
-    @include mixinsfunc.create-flexbox(row, space-between);
-    @include breakpoints.display-small{
-        background-color: green;
-    }
+    min-width: 500px;
     gap: 1rem;
-    @include breakpoints.display-tiny{
-        background-color: red;
+    @include mixinsfunc.create-flexbox(row, space-between);
+    background-color: green;
+    @include breakpoints.display-small{
+        background-color: aqua;
+        margin-top: 10vh;
+        height: 300px;
+        width: 60vw;
+        min-width: 500px;
+        gap: 1rem;
+        @include mixinsfunc.create-flexbox(row, space-between);
     }
-    // left: 22%;
-    top: 28vh;
-    // background-color: blue;
-    .home-data{
-        width: 50vw;
-        height: 60vh;
-        @include mixinsfunc.create-flexbox(column, space-evenly);
+    
+    .home-small{
+        height: 300px;
+        @include mixinsfunc.create-flexbox(column, space-between);
         align-items: flex-start;
-        gap: 2vw;
-        // background-color: grey;
-        // align-content: flex-start;
         h1{
-            font-size: variables.$big-font-size;
+            font-size: 5rem;
             font-weight: 700;
             color: variables.$text-color;
-            flex: 1;
-            flex-shrink: 1;
             max-width: 100%;
-            // line-height: 2;
-            // margin: 0 0 8px;
         }
         h3{
             color: variables.$text-color;
-            // margin: 0 0 35px;
             font-size: 2rem;
             font-weight: 700;
-            // line-height: 3;
-            // flex: 1;
-            // flex-shrink: 1;
-            // max-width: 100%;
-            width: max-content;
         }
         span{
-            font-size: 3vw;
+            font-size: 2rem;
             font-weight: 700;
-            flex: 1;
-            flex-shrink: 1;
             max-width: 100%;
         }
     }
     img{
-        height: 60vh;
-        border-radius: 5px;
+        height: 100%;
+        width: auto;
+        border-radius: 20px;
     }
-
+    
 }
-// .slide{
-//     margin-bottom: 20px;
-// }
 .one{
     display: inline-block;
     margin-right: 15px;
