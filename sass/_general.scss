@@ -25,7 +25,7 @@ span{
     color: variables.$main-color;
 }
 section{
-    position: absolute;
+    // position: absolute;
     box-sizing: border-box;
     padding: 60px 0;
     // top: 50px;
@@ -37,12 +37,12 @@ section{
     @include breakpoints.display-large{
         box-sizing: border-box;
         padding: 85px 0;
-        margin: 0;
-        width: 100vw;
-        height: 600px;
-        transition: all .5s ease;
-        @include mixinsfunc.create-flexbox(row, center);
-        align-items: start;
+        // margin: 0;
+        // width: 100vw;
+        // height: 100vh;
+        // transition: all .5s ease;
+        // // @include mixinsfunc.create-flexbox(row, center);
+        // align-items: start;
         // background-color: greenyellow;
     }
 }

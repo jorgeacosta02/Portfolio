@@ -1,6 +1,7 @@
 @use "variables";
 @use "mixinsfunc";
 @use "general";
+@use "breakpoints";
 
 .about{
     position: relative;
@@ -8,58 +9,101 @@
     width: 100%;
 }
 
-.about-h1{
-    position: absolute;
-    left: -14.7vw;
-    top: 35%;
-    display: inline-block;
-    transform: rotate(-90deg);
-    font-size: 9.5rem;
-    font-weight: 700;
-    color: rgb(79, 79, 79);
-    transition: all .5s ease;
+// .about-h1{
+//     position: absolute;
+//     left: -14.7vw;
+//     top: 35%;
+//     display: inline-block;
+//     transform: rotate(-90deg);
+//     font-size: 9.5rem;
+//     font-weight: 700;
+//     color: rgb(79, 79, 79);
+//     transition: all .5s ease;
 
-}
+// }
 
 .about-text {
-    position: relative;
-    height: 70vh;
-    width: 70vw;
-    @include mixinsfunc.create-flexbox(row, space-between);
-    gap: 2rem;
-    left: 18vw;
-    top: 18vh;
-    gap: 5rem;
+    // position: relative;
+    // height: 70vh;
+    // width: 70vw;
+    // @include mixinsfunc.create-flexbox(row, space-between);
+    // gap: 2rem;
+    // left: 18vw;
+    // top: 18vh;
+    // gap: 5rem;
     // background-color: red;
+
+
+
+    @include mixinsfunc.create-flexbox(column, space-between);
+    padding-bottom: 2vh;
+    height: 80vh;
+    width: 45vw;
+    min-width: 190px;
+    gap: .1rem;
+    margin-top: -3vh;
+    // background-color: green;
+    @include breakpoints.display-large{
+        // background-color: blue;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5%;
+        height: 300px;
+        width: 60vw;
+        min-width: 500px;
+        gap: 1rem;
+    }
 }
 
 .about-img{
-    height: 100%;
-    border-radius: 50%;
+    // height: 100%;
+    // border-radius: 50%;
+
+    // height: 40vh;
+    // width: auto;
+    // border-radius: 10px;
+    display: none;
+    @include breakpoints.display-large{
+        display: inline-block;
+        height: 100%;
+        width: auto;
+        border-radius: 50%;
+    }
+
+
 }
 
 .about-data {
-    height: 100%;
-    width: 40%;
-    @include mixinsfunc.create-flexbox(column, space-between);
-    align-items: flex-start;
-    // background-color: blue;
+    line-height: .5;
+    overflow-x: scroll;
+    @include breakpoints.display-large{
+        height: 100%;
+        width: 40%;
+        @include mixinsfunc.create-flexbox(column, space-between);
+        align-items: flex-start;
+        // background-color: red;
+    }
 }
 
 .about-text h2{
     font-size: variables.$h2-font-size;
-    line-height: 1;
 }
 
 .about-text h4{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     color: variables.$h2-font-size;
     line-height: 1.7;
 }
+
 .about-text p{
-    color: variables.$second-text-color;
-    font-size: variables.$p-font-size;
-    line-height: 1.8;
-    font-family: Times New Roman, Times;
+    font-size: 10px;
+    line-height: 1.5;
+    margin-top: 5px;
+    @include breakpoints.display-large{
+        color: variables.$second-text-color;
+        font-size: 14px;
+        line-height: 1.8;
+        font-family: Times New Roman, Times;
+    }
 }

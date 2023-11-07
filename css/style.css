@@ -25,7 +25,6 @@ span {
 }
 
 section {
-  position: absolute;
   box-sizing: border-box;
   padding: 60px 0;
   width: 100vw;
@@ -41,15 +40,6 @@ section {
   section {
     box-sizing: border-box;
     padding: 85px 0;
-    margin: 0;
-    width: 100vw;
-    height: 600px;
-    transition: all 0.5s ease;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-items: start;
   }
 }
 
@@ -174,6 +164,12 @@ header {
 .navlist_visible {
   left: 0;
 }
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
 .home-text {
   display: flex;
   flex-direction: column;
@@ -311,64 +307,81 @@ header {
   width: 100%;
 }
 
-.about-h1 {
-  position: absolute;
-  left: -14.7vw;
-  top: 35%;
-  display: inline-block;
-  transform: rotate(-90deg);
-  font-size: 9.5rem;
-  font-weight: 700;
-  color: rgb(79, 79, 79);
-  transition: all 0.5s ease;
-}
-
 .about-text {
-  position: relative;
-  height: 70vh;
-  width: 70vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  left: 18vw;
-  top: 18vh;
-  gap: 5rem;
-}
-
-.about-img {
-  height: 100%;
-  border-radius: 50%;
-}
-
-.about-data {
-  height: 100%;
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  align-items: flex-start;
+  padding-bottom: 2vh;
+  height: 80vh;
+  width: 45vw;
+  min-width: 190px;
+  gap: 0.1rem;
+  margin-top: -3vh;
+}
+@media only screen and (min-width: 576px) {
+  .about-text {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    height: 300px;
+    width: 60vw;
+    min-width: 500px;
+    gap: 1rem;
+  }
+}
+
+.about-img {
+  display: none;
+}
+@media only screen and (min-width: 576px) {
+  .about-img {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
+  }
+}
+
+.about-data {
+  line-height: 0.5;
+  overflow-x: scroll;
+}
+@media only screen and (min-width: 576px) {
+  .about-data {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-start;
+  }
 }
 
 .about-text h2 {
   font-size: 3rem;
-  line-height: 1;
 }
 
 .about-text h4 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: 3rem;
   line-height: 1.7;
 }
 
 .about-text p {
-  color: #ccc;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  font-family: Times New Roman, Times;
+  font-size: 10px;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+@media only screen and (min-width: 576px) {
+  .about-text p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: Times New Roman, Times;
+  }
 }
 
 .skills {
