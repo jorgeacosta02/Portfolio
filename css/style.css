@@ -25,17 +25,32 @@ span {
 }
 
 section {
+  position: absolute;
   box-sizing: border-box;
-  padding: 85px 0;
-  margin: 0;
+  padding: 60px 0;
   width: 100vw;
-  height: 600px;
+  height: 100vh;
   transition: all 0.5s ease;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   align-items: start;
+}
+@media only screen and (min-width: 576px) {
+  section {
+    box-sizing: border-box;
+    padding: 85px 0;
+    margin: 0;
+    width: 100vw;
+    height: 600px;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-items: start;
+  }
 }
 
 .favicon {
@@ -72,12 +87,12 @@ header {
 
 .logo {
   color: #fff;
-  font-size: min(8vw, 20px);
+  font-size: min(7vw, 20px);
   font-weight: 700;
   letter-spacing: 1px;
   width: 80%;
   line-height: 50px;
-  padding-left: 2vw;
+  padding-left: 5vw;
 }
 @media only screen and (min-width: 576px) {
   .logo {
@@ -164,18 +179,16 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5vh;
-  height: 300px;
-  width: 60vw;
-  min-width: 500px;
-  gap: 1rem;
+  padding-bottom: 2vh;
+  height: 80vh;
+  width: 90vw;
+  gap: 0.1rem;
+  margin-top: -3vh;
 }
 @media only screen and (min-width: 576px) {
   .home-text {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     margin-top: 5%;
     height: 300px;
     width: 60vw;
@@ -184,52 +197,90 @@ header {
   }
 }
 .home-text .home-small {
-  height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  align-items: flex-start;
+  height: 40vh;
+  line-height: 0.7;
 }
-.home-text .home-small h1 {
-  font-size: 5rem;
-  font-weight: 700;
-  color: #fff;
-  max-width: 100%;
+@media only screen and (min-width: 576px) {
+  .home-text .home-small {
+    align-items: flex-start;
+  }
 }
-.home-text .home-small h3 {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
-}
-.home-text .home-small span {
-  font-size: 2rem;
-  font-weight: 700;
-  max-width: 100%;
-}
-.home-text img {
-  height: 100%;
-  width: auto;
-  border-radius: 20px;
-}
-
-.one {
+.home-text .home-small .hello {
   display: inline-block;
   margin-right: 15px;
   padding: 0 15px;
-  line-height: 32px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   border-radius: 5px;
   background: rgb(255, 39, 39);
   color: #fff;
 }
-
-.two {
+@media only screen and (min-width: 576px) {
+  .home-text .home-small .hello {
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: rgb(255, 39, 39);
+    color: #fff;
+  }
+}
+.home-text .home-small .im {
   display: inline-block;
   color: #ccc;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
+}
+@media only screen and (min-width: 576px) {
+  .home-text .home-small .im {
+    font-size: 25px;
+  }
+}
+.home-text .home-small h1 {
+  font-size: 30px;
+}
+@media only screen and (min-width: 576px) {
+  .home-text .home-small h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    max-width: 100%;
+  }
+}
+.home-text .home-small h3 {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 576px) {
+  .home-text .home-small h3 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+.home-text .home-small span {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 576px) {
+  .home-text .home-small span {
+    font-size: 2rem;
+    font-weight: 700;
+    max-width: 100%;
+  }
+}
+.home-text img {
+  height: 40vh;
+  width: auto;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 576px) {
+  .home-text img {
+    height: 100%;
+    width: auto;
+    border-radius: 20px;
+  }
 }
 
 .button {
