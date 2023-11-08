@@ -345,7 +345,6 @@ header {
 
 .about-data {
   line-height: 0.5;
-  overflow-x: scroll;
 }
 @media only screen and (min-width: 576px) {
   .about-data {
@@ -408,6 +407,7 @@ header {
   width: 10%;
   min-width: 38px;
   border-radius: 8px;
+  transition: 200ms ease;
 }
 .sk:hover {
   box-shadow: 20px 20px 20px rgb(0, 0, 0);
@@ -426,56 +426,65 @@ header {
   width: 100%;
 }
 
-.projects-h1 {
-  position: relative;
-  left: -24vw;
-  top: 36vh;
-  display: inline-block;
-  transform: rotate(-90deg) scaleX(0.65);
-  font-size: 9.5rem;
-  font-weight: 700;
-  color: rgb(79, 79, 79);
-  transition: all 0.5s ease;
-}
-
 .div-projects {
-  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  gap: 4rem;
-  width: 80vw;
-  height: 70%;
-  top: -20vh;
-  left: 13vw;
+}
+@media only screen and (min-width: 576px) {
+  .div-projects {
+    flex-direction: row;
+    position: relative;
+    gap: 4rem;
+    width: 80vw;
+    height: 80vh;
+    font-size: max(1vw, 10px);
+    top: 0;
+  }
 }
 
 .project {
-  height: 75vh;
-  width: 45vw;
-  border-radius: 10px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
+  font-size: 10px;
+  height: calc(100vh - 80px);
+  width: 90%;
+  margin-bottom: 20px;
 }
-.project h2 {
-  margin-bottom: 10%;
+.project .div-img {
+  width: 70vw;
 }
-.project img {
-  box-shadow: 10px 10px 20px black;
+.project .div-img img {
+  width: 100%;
+  height: auto;
 }
-
-.video-img {
-  width: auto;
-  height: 27vh;
-}
-
-.craft-img {
-  width: auto;
-  height: 27vh;
+@media only screen and (min-width: 576px) {
+  .project {
+    height: 75vh;
+    width: 45vw;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: none;
+    text-align: center;
+    font-size: 2vw;
+  }
+  .project h2 {
+    margin-bottom: 5%;
+  }
+  .project .div-img {
+    height: 27vh;
+  }
+  .project .div-img .craft-img {
+    width: auto;
+    height: 100%;
+  }
+  .project .div-img .video-img {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .background {
