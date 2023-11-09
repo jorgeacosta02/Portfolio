@@ -450,7 +450,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-size: 8px;
+  font-size: 10px;
   height: 35vh;
   width: 90%;
   margin-bottom: 20px;
@@ -540,8 +540,8 @@ header {
   justify-content: space-evenly;
   align-items: center;
   height: 25vh;
-  font-size: 8px;
-  margin-bottom: 10px;
+  font-size: 10px;
+  margin-bottom: 8px;
 }
 .backgr .bg-div {
   display: flex;
@@ -549,6 +549,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-bottom: 2px;
 }
 .backgr .bg-div h2 {
   font-size: 12px;
@@ -596,12 +597,11 @@ header {
 }
 .contact .div-contacts {
   position: relative;
-  background-color: chocolate;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 85vh;
+  height: 83vh;
   width: 96%;
   top: -2vh;
   font-size: 1.1rem;
@@ -612,14 +612,13 @@ header {
     gap: 3rem;
     width: 85vw;
     top: 0;
-    background-color: red;
   }
 }
 .contact .div-contacts .links {
   border-radius: 1vw;
-  background-color: blueviolet;
   height: 50%;
   width: 100%;
+  margin-bottom: 2vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -637,13 +636,15 @@ header {
   }
 }
 .contact .div-contacts .links .link-title {
-  font-size: 10px;
+  font-size: 8px;
+  margin-bottom: 8px;
 }
 @media only screen and (min-width: 576px) {
   .contact .div-contacts .links .link-title {
     width: 80%;
     text-align: center;
     margin-bottom: 2%;
+    font-size: 3vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -671,28 +672,32 @@ header {
   font-size: 0.75rem;
 }
 .contact .div-contacts .links .link-div .link-button img {
-  height: 7vh;
+  height: 80%;
   top: 10%;
 }
 .contact .div-contacts .links .link-div .link-button .yahoo-p {
-  font-size: 1.2vw;
+  font-size: max(2vw, 5px);
+}
+@media only screen and (min-width: 576px) {
+  .contact .div-contacts .links .link-div .link-button .yahoo-p {
+    font-size: min(1vw, 14px);
+  }
 }
 .contact .div-contacts .links .link-div .link-button .github {
   border: 1px solid white;
 }
 .contact .div-contacts .links .link-div .link-button .resume-text {
-  font-size: max(2vw, 5px);
+  font-size: max(2vw, 10px);
 }
 .contact .div-contacts .links .link-div .form {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   position: relative;
-  top: 5vh;
   gap: 0.2px;
   width: 100%;
-  height: 60%;
+  height: 100%;
 }
 @media only screen and (min-width: 576px) {
   .contact .div-contacts .links .link-div .form {
@@ -705,14 +710,14 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  font-size: 10px;
-  gap: 0;
+  font-size: 7px;
+  height: 50%;
 }
 @media only screen and (min-width: 576px) {
   .contact .div-contacts .links .link-div .form .form-block {
-    font-size: 4vh;
+    font-size: 3vh;
   }
 }
 .contact .div-contacts .links .link-div .form .form-in {
@@ -732,18 +737,25 @@ header {
   }
 }
 .contact .div-contacts .links .link-div .form .textarea {
-  height: 10vh;
+  height: 200px;
   margin-bottom: 2vh;
 }
 @media only screen and (min-width: 576px) {
   .contact .div-contacts .links .link-div .form .textarea {
-    height: 20vh;
+    height: 500px;
   }
 }
 .contact .div-contacts .links .link-div .form .button {
   margin: 0;
   cursor: pointer;
   border: 1px solid rgb(255, 39, 39);
+  height: 15px;
+  font-size: 10px;
+}
+@media only screen and (min-width: 576px) {
+  .contact .div-contacts .links .link-div .form .button {
+    height: 15vh;
+  }
 }
 .contact .div-contacts .links .link-div .form input {
   height: 5vh;

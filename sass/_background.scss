@@ -41,11 +41,12 @@
 .backgr{
     @include mixinsfunc.create-flexbox(column, space-evenly);
     height: 25vh;
-    font-size: 8px;
-    margin-bottom: 10px;
+    font-size: 10px;
+    margin-bottom: 8px;
     .bg-div{
         @include mixinsfunc.create-flexbox(row, space-between);
         width: 100%;
+        margin-bottom: 2px;
         h2{
             font-size: 12px;
             text-align: left;

@@ -36,7 +36,7 @@
 }
 .project{
     @include mixinsfunc.create-flexbox(column, space-between);
-    font-size: 8px;
+    font-size: 10px;
     height: 35vh;
     width: 90%;
     margin-bottom: 20px;
