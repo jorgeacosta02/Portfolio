@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             message: message
         };
 
-        fetch(`https://jorgeacostaportfolio.netlify.app/send-email`, {
+        fetch('https://jorgeacostaportfolio.netlify.app/send-email', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
