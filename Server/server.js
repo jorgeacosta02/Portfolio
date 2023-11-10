@@ -16,7 +16,12 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(cors());
+app.use(cors({
+    origin: "https://jorgeacostaportfolio.netlify.app",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+    optionsSuccessStatus: 204,
+}));
 
 const transporter = nodemailer.createTransport({
     service: "Yahoo",

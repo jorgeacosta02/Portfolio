@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             message: message
         };
 
-        fetch(`http://127.0.0.1:3000/send-email`, {
+        fetch(`http://jorgeacostaportfolio/send-email`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
