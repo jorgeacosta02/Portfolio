@@ -18,22 +18,18 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-// Configura el transporte Nodemailer
 const transporter = nodemailer.createTransport({
-    service: "Yahoo", // Utiliza otro servicio si lo prefieres
+    service: "Yahoo",
     auth: {
         user: origin_email, 
         pass: origin_email_password 
     }
 });
 
-// Maneja la solicitud POST del formulario
 app.post("/send-email", (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const message = req.body.message;
-
-    // Configura el correo electrónico
     const mailOptions = {
         from: origin_email, 
         to: destination_email, 
@@ -41,7 +37,6 @@ app.post("/send-email", (req, res) => {
         text: "Name: " + name + "\nEmail: " + email + "\nMessage:\n" + message
     };
 
-    // Envía el correo electrónico
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.log(error);
@@ -53,7 +48,6 @@ app.post("/send-email", (req, res) => {
     });
 });
 
-// Inicia el servidor
 app.listen(port, () => {
     console.log(`Lerver listening at port ${port}`);
 });
