@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             message: message
         };
 
-        fetch(`https://jorgeacostaportfolio/send-email`, {
+        fetch(`https://jorgeacostaportfolio.netlify.app/send-email`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
 
 
 // Show menu in mobile
