@@ -2,6 +2,7 @@
 @use "mixinsfunc";
 @use "breakpoints";
 
+
 * {
     margin: 0;
     padding: 0;
@@ -11,24 +12,25 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
+
 body{
     padding: 0;
     margin: 0;
     background-color: variables.$bg-color;
     color: variables.$text-color;
-    // background-color: yellow;
 }
+
 a {
     color: variables.$main-color;
 }
+
 span{
     color: variables.$main-color;
 }
+
 section{
-    // position: absolute;
     box-sizing: border-box;
     padding: 60px 0;
-    // top: 50px;
     width: 100vw;
     height: 100vh;
     transition: all .5s ease;
@@ -37,15 +39,9 @@ section{
     @include breakpoints.display-large{
         box-sizing: border-box;
         padding: 85px 0;
-        // margin: 0;
-        // width: 100vw;
-        // height: 100vh;
-        // transition: all .5s ease;
-        // // @include mixinsfunc.create-flexbox(row, center);
-        // align-items: start;
-        // background-color: greenyellow;
     }
 }
+
 .favicon{
     border-radius: 50%;
 }

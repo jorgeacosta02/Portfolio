@@ -3,41 +3,21 @@
 @use "mixinsfunc";
 @use "breakpoints";
 
+
 .home{
     position: relative;
     height: 100vh;
     width: 100%;
 }
-// .home-h1{
-//     display: none;
-//     @include breakpoints.display-large{
-//         position: absolute;
-//         width: 20px;
-//         height: 100px;
-//         line-height: 100px;
-//         left: 55px;
-//         bottom: 60px;
-//         display: inline-block;
-//         transform: rotate(-90deg);
-//         font-size: 9rem;
-//         font-weight: 700;
-//         color: rgb(79, 79, 79);
-//         transition: all .5s ease;
-//         background-color: blue;
-//         z-index: -1;
-//     }
-// }
+
 .home-text{
-    // box-sizing: border-box;
     @include mixinsfunc.create-flexbox(column, space-between);
     padding-bottom: 2vh;
     height: 80vh;
     width: 90vw;
     gap: .1rem;
     margin-top: -3vh;
-    // background-color: green;
     @include breakpoints.display-large{
-        // background-color: aqua;
         flex-direction: row;
         justify-content: space-between;
         margin-top: 5%;
@@ -46,7 +26,6 @@
         min-width: 500px;
         gap: 1rem;
     }
-    
     .home-small{
         @include mixinsfunc.create-flexbox(column, space-evenly);
         height: 40vh;
@@ -58,23 +37,17 @@
             display: inline-block;
             margin-right: 15px;
             padding: 0 15px;
-            // line-height: 32px;
             font-size: 20px;
             font-weight: 500;
             border-radius: 5px;
             background: variables.$main-color;
             color: variables.$text-color;
             @include breakpoints.display-large{
-                // display: inline-block;
-                // margin-right: 15px;
-                // padding: 0 15px;
-                // line-height: 32px;
                 font-size: 25px;
                 font-weight: 500;
                 border-radius: 5px;
                 background: variables.$main-color;
                 color: variables.$text-color;
-        
             }
         }
         .im{
@@ -83,10 +56,7 @@
             font-size: 20px;
             font-weight: 500;
             @include breakpoints.display-large{
-                // display: inline-block;
-                // color: variables.$second-text-color;
                 font-size: 25px;
-                // font-weight: 500;
             }
         }
         h1{
@@ -127,11 +97,13 @@
     }
     
 }
+
 .button{
     display: inline-block;
     align-items: center;
     justify-content: center;
 }
+
 .btn{
     display: inline-block;
     padding: 12px;
@@ -143,6 +115,7 @@
     font-weight: 500;
     transition: all .5s ease;
 }
+
 .btn:hover{
     transform: scale(1.1)
 }

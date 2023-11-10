@@ -3,26 +3,16 @@
 @use "general";
 @use "breakpoints";
 
+
 .projects{
     position: relative;
     height: 100vh;
     width: 100%;
 }
-// .projects-h1{
-//     position: relative;
-//     left: -24vw;
-//     top: 36vh;
-//     display: inline-block;
-//     transform: rotate(-90deg)  scaleX(0.65);
-//     font-size: 9.5rem;
-//     font-weight: 700;
-//     color: rgb(79, 79, 79);
-//     transition: all .5s ease;
-// }
+
 .div-projects{
     @include mixinsfunc.create-flexbox(column, space-evenly);
     gap: 1rem;
-
     @include breakpoints.display-large{
         flex-direction: row;
         position: relative;
@@ -31,9 +21,9 @@
         height: 80vh;
         font-size: max(#{1vw}, #{10px});
         top: 0;
-        // background-color: grey;
     }
 }
+
 .project{
     @include mixinsfunc.create-flexbox(column, space-between);
     font-size: 10px;
@@ -44,7 +34,6 @@
         @include mixinsfunc.create-flexbox(row, space-between);
         width: 100%;
         text-align: right;
-        // background-color: blue;
         .div-img{
             width: 40vw;
             .video-img{
@@ -57,7 +46,6 @@
 
             }
         }
-
     }
     @include breakpoints.display-large{
         height: 75vh;
@@ -65,9 +53,7 @@
         border-radius: 10px;
         box-sizing: border-box;
         border: none;
-        // text-align: center;
         font-size: min(#{2vw},#{1rem});
-        // background-color: green;
         .pr-div{
             flex-direction: column;
             text-align: center;
@@ -75,18 +61,18 @@
                 margin-bottom: 5%;
             }
             .div-img{
-            height: 27vh;
-            width: 100%;
-            .craft-img{
-                width: auto;
-                height: 100%;
+                height: 27vh;
+                width: 100%;
+                .craft-img{
+                    width: auto;
+                    height: 100%;
+                }
+                .video-img{
+                    width: auto;
+                    max-width: 100%;
+                    height: 100%;
+                }
             }
-            .video-img{
-                width: auto;
-                max-width: 100%;
-                height: 100%;
-            }
-        }
         }
     }
 }

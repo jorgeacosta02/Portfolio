@@ -3,38 +3,14 @@
 @use "general";
 @use "breakpoints";
 
+
 .about{
     position: relative;
     height: 100vh;
     width: 100%;
 }
 
-// .about-h1{
-//     position: absolute;
-//     left: -14.7vw;
-//     top: 35%;
-//     display: inline-block;
-//     transform: rotate(-90deg);
-//     font-size: 9.5rem;
-//     font-weight: 700;
-//     color: rgb(79, 79, 79);
-//     transition: all .5s ease;
-
-// }
-
 .about-text {
-    // position: relative;
-    // height: 70vh;
-    // width: 70vw;
-    // @include mixinsfunc.create-flexbox(row, space-between);
-    // gap: 2rem;
-    // left: 18vw;
-    // top: 18vh;
-    // gap: 5rem;
-    // background-color: red;
-
-
-
     @include mixinsfunc.create-flexbox(column, space-between);
     padding-bottom: 2vh;
     height: 80vh;
@@ -42,9 +18,7 @@
     min-width: 190px;
     gap: .1rem;
     margin-top: -3vh;
-    // background-color: green;
     @include breakpoints.display-large{
-        // background-color: blue;
         flex-direction: row;
         justify-content: space-between;
         margin-top: 5%;
@@ -56,12 +30,6 @@
 }
 
 .about-img{
-    // height: 100%;
-    // border-radius: 50%;
-
-    // height: 40vh;
-    // width: auto;
-    // border-radius: 10px;
     display: none;
     @include breakpoints.display-large{
         display: inline-block;
@@ -69,8 +37,6 @@
         width: auto;
         border-radius: 50%;
     }
-
-
 }
 
 .about-data {
@@ -80,7 +46,6 @@
         width: 40%;
         @include mixinsfunc.create-flexbox(column, space-between);
         align-items: flex-start;
-        // background-color: red;
     }
 }
 
