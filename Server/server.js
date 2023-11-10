@@ -11,7 +11,7 @@ const origin_email = process.env.ORIGIN_EMAIL;
 const origin_email_password = process.env.ORIGIN_EMAIL_PASSWORD;
 const destination_email = process.env.DESTINATION_EMAIL
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -32,6 +32,9 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post("/send-email", (req, res) => {
+
+    console.log('Received request at /send-mail');
+
     const name = req.body.name;
     const email = req.body.email;
     const message = req.body.message;
