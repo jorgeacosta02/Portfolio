@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             message: message
         };
 
-        fetch(`http://jorgeacostaportfolio/send-email`, {
+        fetch(`https://jorgeacostaportfolio/send-email`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
