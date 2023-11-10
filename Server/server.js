@@ -5,7 +5,11 @@ const cors = require("cors");
 require('dotenv').config();
 
 const app = express();
-const port = 3000;
+
+const port = process.env.PORT || 3000;
+const origin_email = process.env.ORIGIN_EMAIL;
+const origin_email_password = process.env.ORIGIN_EMAIL_PASSWORD;
+const destination_email = process.env.DESTINATION_EMAIL
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
@@ -18,21 +22,21 @@ app.use(cors());
 const transporter = nodemailer.createTransport({
     service: "Yahoo", // Utiliza otro servicio si lo prefieres
     auth: {
-        user: "jorgeacostadeleon11@yahoo.com", // Reemplaza con tu dirección de correo electrónico
-        pass: "vhyezsztppwzecyw" // Reemplaza con tu contraseña de correo electrónico
+        user: origin_email, 
+        pass: origin_email_password 
     }
 });
 
 // Maneja la solicitud POST del formulario
-app.post("/send-correo", (req, res) => {
+app.post("/send-email", (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const message = req.body.message;
 
     // Configura el correo electrónico
     const mailOptions = {
-        from: "jorgeacostadeleon11@yahoo.com", // Reemplaza con tu dirección de correo electrónico
-        to: "jorgeacostadeleon@yahoo.com", // Reemplaza con la dirección del destinatario
+        from: origin_email, 
+        to: destination_email, 
         subject: "Contact message from " + name,
         text: "Name: " + name + "\nEmail: " + email + "\nMessage:\n" + message
     };

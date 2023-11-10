@@ -26,7 +26,7 @@
         position: relative;
         // background-color: chocolate;
         @include mixinsfunc.create-flexbox(column, space-evenly);
-        height: 83vh;
+        height: 75vh;
         width: 96%;
         top: -2vh;
         font-size: 1.1rem;
@@ -34,7 +34,7 @@
             flex-direction: row;
             gap: 3rem;
             width: 85vw;
-            top: 0;
+            top: 4vh;
             // left: 17vw;
             // background-color: red;
         }
@@ -156,6 +156,7 @@
                         font-size: 10px;
                         @include breakpoints.display-large{
                             height: 15vh;
+                            font-size: max(#{1vw},#{12px});
                         }
                     }
                     input{

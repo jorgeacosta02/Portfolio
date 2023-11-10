@@ -1,4 +1,9 @@
-// console.log("index.js loaded");
+console.log("index.js loaded");
+// require('dotenv').config();
+
+
+const port = 3000
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.getElementById("contactForm");
@@ -23,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // console.log('data: ',data);
         // Enviar los datos al servidor Node.js
-        fetch("http://127.0.0.1:3000/send-correo", {
+        fetch(`http://127.0.0.1:3000/send-email`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
