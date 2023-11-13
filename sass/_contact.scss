@@ -55,7 +55,7 @@
                     height: 20%;
                     width: 100%;
                     @include mixinsfunc.create-flexbox(row, space-evenly);
-                    border-radius: 9px;
+                    border-radius: 5px;
                     cursor: pointer;
                     border: 1px solid variables.$grey-color;
                     font-size: .75rem;
