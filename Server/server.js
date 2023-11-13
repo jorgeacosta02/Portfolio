@@ -7,9 +7,9 @@ require('dotenv').config();
 const app = express();
 
 const port = process.env.PORT || 3000;
-const origin_email = process.env.ORIGIN_EMAIL;
-const origin_email_password = process.env.ORIGIN_EMAIL_PASSWORD;
-const destination_email = process.env.DESTINATION_EMAIL
+// const origin_email = process.env.ORIGIN_EMAIL;
+// const origin_email_password = process.env.ORIGIN_EMAIL_PASSWORD;
+// const destination_email = process.env.DESTINATION_EMAIL
 
 // process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
@@ -26,8 +26,8 @@ app.use(cors({
 const transporter = nodemailer.createTransport({
     service: "Yahoo",
     auth: {
-        user: origin_email, 
-        pass: origin_email_password 
+        user: 'jorgeacostadeleon11@yahoo.com', 
+        pass: 'vhyezsztppwzecyw' 
     }
 });
 
@@ -39,8 +39,8 @@ app.post("/send-email", (req, res) => {
     const email = req.body.email;
     const message = req.body.message;
     const mailOptions = {
-        from: origin_email, 
-        to: destination_email, 
+        from: 'jorgeacostadeleon11@yahoo.com', 
+        to: 'jorgeacostadeleon@yahoo.com', 
         subject: "Contact message from " + name,
         text: "Name: " + name + "\nEmail: " + email + "\nMessage:\n" + message
     };
