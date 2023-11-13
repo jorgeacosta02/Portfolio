@@ -75,12 +75,7 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(cors({
-    origin: "https://jorgeacostaportfolio.netlify.app",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-    optionsSuccessStatus: 204,
-}));
+app.use(cors());
 
 const mailgunApiUrl = `https://api.mailgun.net/v3/sandboxf908e68beb334b10b3ac9b2f8d27d83e.mailgun.org/messages`;
 
@@ -101,15 +96,17 @@ app.post("/send-email", (req, res) => {
     axios.post(mailgunApiUrl, data, {
         auth: {
             username: 'api',
-            password: '8a20ca038ddaa3ece860334a51f90115',
+            password: 'RviPMM.&F+4n5nJ',
         },
     })
     .then(response => {
         console.log("E-mail sent successfully", response.data);
+        res.header("Access-Control-Allow-Origin", "*"); // Agrega esta línea
         res.json({ success: true });
     })
     .catch(error => {
         console.error(error);
+        res.header("Access-Control-Allow-Origin", "*")
         res.json({ success: false, error: error.message });
     });
 });

@@ -3,4 +3,5 @@
   command = "npm run build"  # Puedes ajustar esto según tu configuración
 
 [[plugins]]
+  path = "send-email.js"
   package = "netlify-plugin-functions-install"
