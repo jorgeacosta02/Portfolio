@@ -1,0 +1,6 @@
+[build]
+  functions = "functions"
+  command = "npm run build"  # Puedes ajustar esto según tu configuración
+
+[[plugins]]
+  package = "netlify-plugin-functions-install"
