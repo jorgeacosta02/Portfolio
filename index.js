@@ -37,8 +37,9 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         })
         .catch(error => {
-            alert("There was an error in the request. Please, try it again later.");
-            // console.log(error);
+            alert("There was an error in the request. Please, try it again later. "+ error.message);
+
+            console.log(error);
         });
     });
 });
