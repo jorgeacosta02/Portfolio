@@ -3,7 +3,7 @@
   command = "npm run build"  # Puedes ajustar esto según tu configuración
 
 [[plugins]]
-  path = "send-email.js"
+  path = "send-email"
   package = "netlify-plugin-functions-install"
 
 [[headers]]
