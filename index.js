@@ -1,17 +1,13 @@
-// Función para resetear el formulario
+const form =  document.getElementById("contactForm");
+
 function resetForm() {
-    // Resetear los valores de los campos después de enviar el formulario
-    document.getElementById("contactForm").reset();
-}
+    form.reset();
+};
 
-// Event listener para el envío del formulario
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-    // Prevenir el comportamiento predeterminado del formulario (evitar que se recargue la página)
+form.addEventListener("submit", function (event) {
+
     event.preventDefault();
-
-    // Realizar la lógica de envío del formulario a través de Formspree
-    const form = document.getElementById("contactForm");
-    const url = "https://formspree.io/f/mbjveazj";  // Reemplaza con tu URL de Formspree
+    const url = "https://formspree.io/f/mbjveazj"; 
 
     fetch(url, {
         method: "POST",
@@ -22,20 +18,17 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     })
     .then(response => response.json())
     .then(data => {
-        // Aquí puedes manejar la respuesta de Formspree si es necesario
         console.log(data);
-        
-        // Luego de enviar el formulario, llamar a la función resetForm para limpiar los campos
         resetForm();
+        alert('Message sent successfully!!');
     })
     .catch(error => {
-        // Manejar errores en caso de que falle la solicitud
+        alert('Error sending message. Please, try it again later.');
         console.error("Error:", error);
     });
 });
 
 
-// Resto del código para mostrar/ocultar el menú en dispositivos móviles
 const toggleButton = document.querySelector(".toggleButton");
 const navlist = document.querySelector(".navlist");
 const homeBut = document.querySelector(".home-but");
