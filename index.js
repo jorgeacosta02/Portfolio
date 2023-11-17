@@ -1,52 +1,41 @@
-// console.log("index.js loaded");
+// Función para resetear el formulario
+function resetForm() {
+    // Resetear los valores de los campos después de enviar el formulario
+    document.getElementById("contactForm").reset();
+}
 
-// const port = 3000
+// Event listener para el envío del formulario
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    // Prevenir el comportamiento predeterminado del formulario (evitar que se recargue la página)
+    event.preventDefault();
 
+    // Realizar la lógica de envío del formulario a través de Formspree
+    const form = document.getElementById("contactForm");
+    const url = "https://formspree.io/f/mbjveazj";  // Reemplaza con tu URL de Formspree
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const contactForm = document.getElementById("contactForm");
-
-//     contactForm.addEventListener("submit", function(event) {
-//         event.preventDefault();
-
-//         const name = document.getElementById("name").value;
-//         const email = document.getElementById("email").value;
-//         const message = document.getElementById("message").value;
-
-//         const data = {
-//             name: name,
-//             email: email,
-//             message: message
-//         };
-
-//         fetch('https://jorgeacostaportfolio.netlify.app/send-email', {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify(data),
-//         })
-//         .then(console.log('then after fetch'))
-//         .then(response => response.json())
-//         .then(data => {
-//             if (data.success) {
-//                 alert("Message sent successfully");
-//                 contactForm.reset();
-//             } else {
-//                 alert("Error sending message. Please, try it again later.");
-//             }
-//         })
-//         .catch(error => {
-//             alert("There was an error in the request. Please, try it again later. "+ error.message);
-
-//             console.log(error);
-//         });
-//     });
-// });
+    fetch(url, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+            "Accept": "application/json"
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Aquí puedes manejar la respuesta de Formspree si es necesario
+        console.log(data);
+        
+        // Luego de enviar el formulario, llamar a la función resetForm para limpiar los campos
+        resetForm();
+    })
+    .catch(error => {
+        // Manejar errores en caso de que falle la solicitud
+        console.error("Error:", error);
+    });
+});
 
 
-// Show menu in mobile
-
+// Resto del código para mostrar/ocultar el menú en dispositivos móviles
 const toggleButton = document.querySelector(".toggleButton");
 const navlist = document.querySelector(".navlist");
 const homeBut = document.querySelector(".home-but");
@@ -83,5 +72,3 @@ bgBut.addEventListener("click", () => {
 contactBut.addEventListener("click", () => {
     navlist.classList.toggle("navlist_visible");
 });
-
-
