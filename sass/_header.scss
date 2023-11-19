@@ -46,7 +46,7 @@ header{
 
 .navlist{
     box-sizing: border-box;
-    @include mixinsfunc.create-flexbox(column, space-between);
+    @include mixinsfunc.create-flexbox(column, space-evenly);
     background-color: variables.$second-bg-color;
     position: fixed;
     padding: 40px 0;
@@ -68,7 +68,7 @@ header{
     }
     a{
         color: variables.$second-text-color;
-        font-size: max(#{1.5vw}, #{10px});
+        font-size: max(#{1.5vw}, #{14px});
         font-weight: 500;
         transition: all .45s ease;
         &:hover{
