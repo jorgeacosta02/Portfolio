@@ -104,11 +104,10 @@ header {
   align-items: center;
   background-color: #202020;
   position: fixed;
-  padding: 40px 0;
+  padding: 20px 0 60px;
   top: 50px;
   width: 100%;
   height: calc(100vh - 50px);
-  overflow-y: auto;
   right: -100%;
   transition: left 0.3s;
 }
@@ -118,7 +117,7 @@ header {
     position: relative;
     flex-direction: row;
     padding: 0 4vw;
-    width: 70%;
+    width: 60%;
     height: 70px;
     right: 0;
     top: 0;
@@ -127,13 +126,18 @@ header {
 }
 .navlist a {
   color: #ccc;
-  font-size: max(2vw, 12px);
+  font-size: 16px;
   font-weight: 500;
   transition: all 0.45s ease;
 }
 .navlist a:hover {
   color: rgb(255, 39, 39);
   width: auto;
+}
+@media only screen and (min-width: 576px) {
+  .navlist a {
+    font-size: max(1vw, 10px);
+  }
 }
 .navlist a:active {
   color: rgb(241, 241, 9);
@@ -328,7 +332,6 @@ header {
     width: 60vw;
     min-width: 500px;
     gap: 1rem;
-    background-color: red;
   }
 }
 
@@ -349,7 +352,6 @@ header {
 }
 @media only screen and (min-width: 576px) {
   .about-data {
-    background-color: blue;
     height: 60%;
     width: 40%;
     display: flex;
@@ -379,7 +381,7 @@ header {
 @media only screen and (min-width: 576px) {
   .about-text p {
     color: #ccc;
-    font-size: auto;
+    font-size: 2.8vh;
     line-height: 4vh;
     font-family: Times New Roman, Times;
   }

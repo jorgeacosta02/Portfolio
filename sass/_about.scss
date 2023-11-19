@@ -26,7 +26,7 @@
         width: 60vw;
         min-width: 500px;
         gap: 1rem;
-        background-color: red;
+        // background-color: red;
     }
 }
 
@@ -43,7 +43,7 @@
 .about-data {
     line-height: .5;
     @include breakpoints.display-large{
-        background-color: blue;
+        // background-color: blue;
         height: 60%;
         width: 40%;
         @include mixinsfunc.create-flexbox(column, space-between);
@@ -68,7 +68,7 @@
     margin-top: 5px;
     @include breakpoints.display-large{
         color: variables.$second-text-color;
-        font-size: auto;
+        font-size: 2.8vh;
         line-height: 4vh;
         font-family: Times New Roman, Times;
     }

@@ -49,11 +49,10 @@ header{
     @include mixinsfunc.create-flexbox(column, space-evenly);
     background-color: variables.$second-bg-color;
     position: fixed;
-    padding: 40px 0;
+    padding: 20px 0 60px;
     top: 50px;
     width: 100%;
     height: calc(100vh - 50px);
-    overflow-y: auto;
     right: -100%;
     transition: left 0.3s;
     @include breakpoints.display-large{
@@ -61,7 +60,7 @@ header{
         position: relative;
         flex-direction: row;
         padding: 0 4vw;
-        width: 70%;
+        width: 60%;
         height: 70px;
         right: 0;
         top: 0;
@@ -69,12 +68,15 @@ header{
     }
     a{
         color: variables.$second-text-color;
-        font-size: max(#{2vw}, #{12px});
+        font-size: 16px;
         font-weight: 500;
         transition: all .45s ease;
         &:hover{
             color: variables.$main-color;
             width: auto;
+        }
+        @include breakpoints.display-large{
+            font-size: max(#{1vw}, #{10px});
         }
         &:active{
             color: variables.$active-color;
