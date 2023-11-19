@@ -12,21 +12,20 @@
 
 .about-text {
     @include mixinsfunc.create-flexbox(column, space-between);
-    padding-bottom: 2vh;
+    // padding-bottom: 2vh;
     height: 80vh;
     width: 45vw;
     min-width: 190px;
     gap: .1rem;
-    margin-top: -3vh;
+    margin-top: 5vh;
     @include breakpoints.display-large{
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 5%;
-        
+        margin-top: 2%;
         width: 60vw;
+        height: 60vh;
         min-width: 500px;
         gap: 1rem;
-        // background-color: red;
     }
 }
 
@@ -34,7 +33,7 @@
     display: none;
     @include breakpoints.display-large{
         display: inline-block;
-        height: 50%;
+        height: 60%;
         width: auto;
         border-radius: 50%;
     }
@@ -43,8 +42,7 @@
 .about-data {
     line-height: .5;
     @include breakpoints.display-large{
-        // background-color: blue;
-        height: 60%;
+        height: 100%;
         width: 40%;
         @include mixinsfunc.create-flexbox(column, space-between);
         align-items: flex-start;
@@ -63,7 +61,7 @@
 }
 
 .about-text p{
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.5;
     margin-top: 5px;
     @include breakpoints.display-large{
