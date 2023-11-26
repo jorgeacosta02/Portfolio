@@ -43,7 +43,7 @@
     line-height: .5;
     @include breakpoints.display-large{
         height: 100%;
-        width: 40%;
+        width: 100%;
         @include mixinsfunc.create-flexbox(column, space-between);
         align-items: flex-start;
     }
