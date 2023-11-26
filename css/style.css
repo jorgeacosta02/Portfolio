@@ -374,7 +374,7 @@ header {
 }
 
 .about-text p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.5;
   margin-top: 5px;
 }
@@ -454,7 +454,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-size: 10px;
+  font-size: 15px;
   height: 35vh;
   width: 90%;
   margin-bottom: 20px;
