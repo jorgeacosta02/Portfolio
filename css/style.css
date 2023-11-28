@@ -408,8 +408,8 @@ header {
 }
 
 .sk {
-  width: 15%;
-  min-width: 18px;
+  width: 25%;
+  min-width: 38px;
   border-radius: 8px;
   transition: 200ms ease;
 }
