@@ -31,6 +31,9 @@
     width: 90%;
     margin-bottom: 20px;
     .pr-div{
+        a{
+            color: g.$main-color;
+        }
         @include mixinsfunc.create-flexbox(row, space-between);
         width: 100%;
         text-align: right;
