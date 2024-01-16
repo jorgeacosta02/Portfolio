@@ -6,14 +6,14 @@
 
 .skills{
     position: relative;
-    height: 100vh;
+    // height: 100vh;
     width: 100%;
+    margin-top: 10vh;
 }
 
 .div-skills{
     width: 80vw;
-    height: 63vh;
-    margin-top: 10vh;
+    // height: 63vh;
     left: 10vw;
     gap: 1rem;
     @include mixinsfunc.create-flexbox(row, space-between);
