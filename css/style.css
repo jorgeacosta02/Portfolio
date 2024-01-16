@@ -467,6 +467,9 @@ header {
   width: 100%;
   text-align: right;
 }
+.project .pr-div a {
+  color: rgb(255, 39, 39);
+}
 .project .pr-div .div-img {
   width: 40vw;
 }
@@ -476,6 +479,12 @@ header {
 }
 .project .pr-div .div-img .craft-img {
   width: 50%;
+  height: auto;
+}
+.project .pr-div .div-img .explo-img {
+  background-color: white;
+  padding: 1vw;
+  width: 80%;
   height: auto;
 }
 @media only screen and (min-width: 576px) {

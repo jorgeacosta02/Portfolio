@@ -32,7 +32,7 @@
     margin-bottom: 20px;
     .pr-div{
         a{
-            color: g.$main-color;
+            color: variables.$main-color;
         }
         @include mixinsfunc.create-flexbox(row, space-between);
         width: 100%;
@@ -45,6 +45,13 @@
             }
             .craft-img{
                 width: 50%;
+                height: auto;
+                
+            }
+            .explo-img{
+                background-color: white;
+                padding: 1vw;
+                width: 80%;
                 height: auto;
 
             }
