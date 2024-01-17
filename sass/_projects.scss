@@ -6,12 +6,18 @@
 
 .projects{
     position: relative;
-    // height: 100vh;
+    padding-top: 10px;
     width: 100%;
+    flex-direction: column;
+    height: 200vh;
+    // background-color: red
 }
 
 .div-projects{
+    position: relative;
+    top: 10px;
     @include mixinsfunc.create-flexbox(column, space-evenly);
+    height: 80vh;
     gap: 1rem;
     @include breakpoints.display-large{
         flex-direction: row;
@@ -30,13 +36,20 @@
     // height: 35vh;
     width: 90%;
     margin-bottom: 20px;
+    p{
+        font-size: 10px
+    }
     .pr-div{
         a{
             color: variables.$main-color;
         }
+        h2{
+            font-size: 12px;
+        }
+        
         @include mixinsfunc.create-flexbox(row, space-between);
         width: 100%;
-        text-align: right;
+        text-align: left;
         .div-img{
             width: 40vw;
             .video-img{
@@ -52,6 +65,7 @@
                 background-color: white;
                 padding: 1vw;
                 width: 80%;
+                min-width: 70px;
                 height: auto;
 
             }

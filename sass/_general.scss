@@ -32,10 +32,10 @@ section{
     box-sizing: border-box;
     padding: 60px 0;
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
     transition: all .5s ease;
     @include mixinsfunc.create-flexbox(row, center);
-    align-items: start;
+    align-items: flex-start;
     @include breakpoints.display-large{
         box-sizing: border-box;
         padding: 85px 0;
