@@ -6,7 +6,7 @@
 
 .home{
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     .home-text{
         @include mixinsfunc.create-flexbox(column, space-between);
@@ -21,8 +21,6 @@
             margin-top: 5%;
             height: 300px;
             width: 100vw;
-            min-width: 500px;
-            gap: 1rem;
             .home-small{
                 @include mixinsfunc.create-flexbox(column, space-evenly);
                 height: 40vh;

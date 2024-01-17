@@ -168,7 +168,7 @@ header {
 }
 .home {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 .home .home-text {
@@ -189,8 +189,6 @@ header {
     margin-top: 5%;
     height: 300px;
     width: 100vw;
-    min-width: 500px;
-    gap: 1rem;
   }
   .home .home-text .home-small {
     display: flex;
@@ -294,7 +292,8 @@ header {
 
 .about {
   position: relative;
-  width: 100%;
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -303,6 +302,7 @@ header {
 @media only screen and (min-width: 576px) {
   .about {
     align-items: flex-start;
+    padding-top: 100px;
   }
 }
 .about .about-text {
@@ -316,12 +316,10 @@ header {
 }
 @media only screen and (min-width: 576px) {
   .about .about-text {
+    width: 100vw;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 2%;
-    width: 60vw;
-    min-width: 500px;
-    gap: 1rem;
   }
 }
 .about .about-text .about-img {
@@ -341,7 +339,7 @@ header {
 @media only screen and (min-width: 576px) {
   .about .about-text .about-data {
     height: 100%;
-    width: 100%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -365,7 +363,6 @@ header {
     color: #ccc;
     font-size: 2.8vh;
     line-height: 4vh;
-    font-family: Times New Roman, Times;
   }
 }
 
