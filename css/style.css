@@ -682,7 +682,7 @@ header {
 }
 @media only screen and (min-width: 576px) {
   .contact .div-contacts .links .link-div .link-button .yahoo-p {
-    font-size: min(vw, 14px);
+    font-size: calc(max(11px, 2.2vw) * 1);
   }
 }
 .contact .div-contacts .links .link-div .link-button .github {
@@ -715,14 +715,13 @@ header {
   justify-content: space-between;
   align-items: center;
   font-size: max(11px, 2.2vw);
-  height: 50%;
 }
 @media only screen and (min-width: 576px) {
   .contact .div-contacts .links .link-div .form .form-block {
     font-size: 3vh;
   }
 }
-.contact .div-contacts .links .link-div .form .form-in {
+.contact .div-contacts .links .link-div .form .form-block .form-in {
   box-sizing: border-box;
   font-size: max(11px, 2.2vw);
   width: 100%;
@@ -734,16 +733,17 @@ header {
   font-family: Arial, Helvetica, sans-serif;
 }
 @media only screen and (min-width: 576px) {
-  .contact .div-contacts .links .link-div .form .form-in {
+  .contact .div-contacts .links .link-div .form .form-block .form-in {
     font-size: 0.8rem;
   }
 }
-.contact .div-contacts .links .link-div .form .textarea {
-  height: 200px;
+.contact .div-contacts .links .link-div .form .form-block .textarea {
+  min-height: 100px;
   margin-bottom: 2vh;
+  background-color: red;
 }
 @media only screen and (min-width: 576px) {
-  .contact .div-contacts .links .link-div .form .textarea {
+  .contact .div-contacts .links .link-div .form .form-block .textarea {
     height: 500px;
   }
 }
