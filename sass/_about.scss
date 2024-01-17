@@ -12,20 +12,16 @@
     @include breakpoints.display-large{
         align-items: flex-start;
         padding-top: calc(v.$desk-NavBar-height + 10px);
-        // background-color: red
     }
-    
     .about-text {
         @include mixinsfunc.create-flexbox(column, space-between);
         width: 80vw;
-        min-width: 190px;
         gap: .1rem;
         @include breakpoints.display-large{
             width: 100vw;
             flex-direction: row;
             justify-content: space-evenly;
             margin-top: 2%;
-            // background-color: blue;
         }
         .about-img{
             display: none;
@@ -34,10 +30,8 @@
                 height: 60%;
                 width: auto;
                 border-radius: 50%;
-                // background-color: green;
             }
         }
-        
         .about-data {
             line-height: .5;
             @include breakpoints.display-large{
@@ -45,16 +39,13 @@
                 width: 40%;
                 @include mixinsfunc.create-flexbox(column, space-between);
                 align-items: flex-start;
-                // background-color: grey;
             }
-
             h4{
                 font-size: 20px;
                 font-weight: 600;
                 color: v.$h2-font-size;
                 line-height: 1.7;
             }
-
             p{
                 font-size: v.$mobile-p-font-size;
                 line-height: 1.5;
@@ -63,9 +54,6 @@
                     color: v.$second-text-color;
                     font-size: 2.8vh;
                     line-height: 4vh;
-                    // width: 50%;
-                    // background-color: yellow;
-                    // font-family: Times New Roman, Times;
                 }
             }
         }

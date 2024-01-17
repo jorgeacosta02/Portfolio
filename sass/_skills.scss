@@ -1,37 +1,35 @@
-@use "variables";
-@use "mixinsfunc";
-@use "general";
-@use "breakpoints";
+@use 'variables' as v;
+@use 'mixinsfunc';
+@use 'general';
+@use 'breakpoints';
 
 
 .skills{
     position: relative;
-    // height: 100vh;
+    min-height: 100vh;
     width: 100%;
     margin-top: 10vh;
-}
-
-.div-skills{
-    width: 80vw;
-    // height: 63vh;
-    left: 10vw;
-    gap: 1rem;
-    @include mixinsfunc.create-flexbox(row, space-between);
-    align-content: space-around;
-    flex-wrap: wrap;
-}
-
-.sk{
-    width: 25%;
-    min-width: 38px;
-    border-radius: 8px;
-    transition: 200ms ease;
-    &:hover{
-        box-shadow: 20px 20px 20px rgba(0,0,0,1);
-        transform:scale(1.2);
-        transform-origin: center;
-    }
-    @include breakpoints.display-large{
-        width: 10%;
+    @include mixinsfunc.create-flexbox(row,center);
+    .div-skills{
+        width: 80vw;
+        left: 10vw;
+        gap: 1rem;
+        @include mixinsfunc.create-flexbox(row, space-between);
+        align-content: space-around;
+        flex-wrap: wrap;
+        .sk{
+            width: 25%;
+            min-width: 38px;
+            border-radius: 8px;
+            transition: 200ms ease;
+            &:hover{
+                box-shadow: 20px 20px 20px rgba(0,0,0,1);
+                transform:scale(1.2);
+                transform-origin: center;
+            }
+            @include breakpoints.display-large{
+                width: 10%;
+            }
+        }
     }
 }
