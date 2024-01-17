@@ -1,20 +1,19 @@
-@use "variables";
-@use "mixinsfunc";
-@use "general";
-@use "breakpoints";
+@use 'variables' as v;
+@use 'mixinsfunc';
+@use 'general';
+@use 'breakpoints';
 
 
 .contact{
     position: relative;
-    height: 100vh;
     width: 100%;
     .div-contacts{
         position: relative;
         @include mixinsfunc.create-flexbox(column, space-evenly);
         height: 75vh;
         width: 96%;
-        top: -2vh;
-        font-size: 1.1rem;
+        // top: -2vh;
+        // font-size: 1.1rem;
         @include breakpoints.display-large{
             flex-direction: row;
             gap: 3rem;
@@ -33,8 +32,8 @@
                 height: 100%;
                 width: 50%;
                 gap: 1rem;
-                color: variables.$text-color;
-                border: 1px solid variables.$grey-color;
+                color: v.$text-color;
+                border: 1px solid v.$grey-color;
             }
             .link-title{
                 font-size: 8px;
@@ -45,6 +44,9 @@
                     margin-bottom: 2%;
                     font-size: 3vh;
                     @include mixinsfunc.create-flexbox(row, space-between);
+                }
+                h2{
+                    font-size: v.$mobile-h2-font-size;
                 }
             }
             .link-div{
@@ -57,24 +59,24 @@
                     @include mixinsfunc.create-flexbox(row, space-evenly);
                     border-radius: 5px;
                     cursor: pointer;
-                    border: 1px solid variables.$grey-color;
-                    font-size: .75rem;
+                    border: 1px solid v.$grey-color;
+                    font-size: calc(v.$mobile-p-font-size * .65);
                     // background-color: blue;
                     img{
                         height: 80%;
                         top: 10%;
                     }
                     .yahoo-p{
-                        font-size: max(#{2vw}, #{5px});
+                        // font-size: max(#{2vw}, #{5px});
                         @include breakpoints.display-large{
-                            font-size: min(#{1vw}, #{14px});
+                            font-size: min(#{vw}, #{14px});
                         }
                     }
                     .github{
                         border: 1px solid white;
                     }
                     .resume-text{
-                        font-size: max(#{2vw}, #{10px});
+                        font-size: v.$mobile-p-font-size;
                     }
                 }
                 .form{
@@ -91,7 +93,7 @@
                     .form-block{
                         width: 100%;
                         @include mixinsfunc.create-flexbox(column, space-between);
-                        font-size: 7px;
+                        font-size: v.$mobile-p-font-size;
                         height: 50%;
                         @include breakpoints.display-large{
                             font-size: 3vh;
@@ -99,13 +101,13 @@
                     }
                     .form-in{
                         box-sizing: border-box;
-                        font-size: 2vw;
+                        font-size: v.$mobile-p-font-size;
                         width: 100%;
                         height: 5vh;
                         border-radius: 5px;
-                        border: 1px solid variables.$grey-color;
-                        background-color: variables.$bg-color;
-                        color: variables.$text-color;
+                        border: 1px solid v.$grey-color;
+                        background-color: v.$bg-color;
+                        color: v.$text-color;
                         font-family: Arial, Helvetica, sans-serif;
                         @include breakpoints.display-large{
                             font-size: .8rem;
@@ -121,7 +123,7 @@
                     .button{
                         margin: 0;
                         cursor: pointer;
-                        border : 1px solid variables.$main-color;
+                        border : 1px solid v.$main-color;
                         height: 15px;
                         font-size: 10px;
                         @include breakpoints.display-large{
@@ -129,9 +131,9 @@
                             font-size: max(#{1vw},#{12px});
                         }
                     }
-                    input{
-                        height: 5vh;
-                    }
+                    // input{
+                    //     height: 5vh;
+                    // }
                 }
             }
         }

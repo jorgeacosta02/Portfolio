@@ -416,7 +416,7 @@ header {
 }
 
 .projects {
-  margin-top: 50px;
+  padding-top: 50px;
   width: 100%;
   flex-direction: column;
 }
@@ -597,7 +597,6 @@ header {
 
 .contact {
   position: relative;
-  height: 100vh;
   width: 100%;
 }
 .contact .div-contacts {
@@ -608,8 +607,6 @@ header {
   align-items: center;
   height: 75vh;
   width: 96%;
-  top: -2vh;
-  font-size: 1.1rem;
 }
 @media only screen and (min-width: 576px) {
   .contact .div-contacts {
@@ -656,6 +653,9 @@ header {
     align-items: center;
   }
 }
+.contact .div-contacts .links .link-title h2 {
+  font-size: max(15px, 3vw);
+}
 .contact .div-contacts .links .link-div {
   height: 80%;
   width: 80%;
@@ -674,25 +674,22 @@ header {
   border-radius: 5px;
   cursor: pointer;
   border: 1px solid rgb(79, 79, 79);
-  font-size: 0.75rem;
+  font-size: calc(max(11px, 2.2vw) * 0.65);
 }
 .contact .div-contacts .links .link-div .link-button img {
   height: 80%;
   top: 10%;
 }
-.contact .div-contacts .links .link-div .link-button .yahoo-p {
-  font-size: max(2vw, 5px);
-}
 @media only screen and (min-width: 576px) {
   .contact .div-contacts .links .link-div .link-button .yahoo-p {
-    font-size: min(1vw, 14px);
+    font-size: min(vw, 14px);
   }
 }
 .contact .div-contacts .links .link-div .link-button .github {
   border: 1px solid white;
 }
 .contact .div-contacts .links .link-div .link-button .resume-text {
-  font-size: max(2vw, 10px);
+  font-size: max(11px, 2.2vw);
 }
 .contact .div-contacts .links .link-div .form {
   display: flex;
@@ -717,7 +714,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-size: 7px;
+  font-size: max(11px, 2.2vw);
   height: 50%;
 }
 @media only screen and (min-width: 576px) {
@@ -727,7 +724,7 @@ header {
 }
 .contact .div-contacts .links .link-div .form .form-in {
   box-sizing: border-box;
-  font-size: 2vw;
+  font-size: max(11px, 2.2vw);
   width: 100%;
   height: 5vh;
   border-radius: 5px;
@@ -762,9 +759,6 @@ header {
     height: 15vh;
     font-size: max(1vw, 12px);
   }
-}
-.contact .div-contacts .links .link-div .form input {
-  height: 5vh;
 }
 
 /*# sourceMappingURL=style.css.map */
