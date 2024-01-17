@@ -462,15 +462,18 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   width: 100%;
+  height: 70px;
   background-color: red;
+  margin-bottom: 10px;
 }
 .projects .div-projects .project .pr-div h2 {
   font-size: max(15px, 3vw);
   text-align: left;
 }
 .projects .div-projects .project .pr-div .video-img {
-  width: 100%;
+  width: 40%;
 }
 .projects .div-projects .project .pr-div .craft-img {
   width: 70px;
@@ -479,10 +482,8 @@ header {
 }
 .projects .div-projects .project .pr-div .explo-img {
   background-color: white;
-  padding: 1vw;
-  width: 80%;
+  width: 130px;
   min-width: 70px;
-  height: auto;
 }
 @media only screen and (min-width: 576px) {
   .projects .div-projects .project {
