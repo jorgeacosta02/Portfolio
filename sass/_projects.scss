@@ -6,10 +6,11 @@
 
 .projects{
     position: relative;
-    padding-top: 10px;
+    margin-top: 80px;
     width: 100%;
     flex-direction: column;
-    height: 200vh;
+    box-sizing: border-box;
+    // height: 200vh;
     // background-color: red
 }
 
@@ -36,7 +37,7 @@
     // height: 35vh;
     width: 90%;
     margin-bottom: 20px;
-    p{
+    p,a{
         font-size: 10px
     }
     .pr-div{

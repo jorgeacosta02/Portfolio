@@ -428,10 +428,10 @@ header {
 
 .projects {
   position: relative;
-  padding-top: 10px;
+  margin-top: 80px;
   width: 100%;
   flex-direction: column;
-  height: 200vh;
+  box-sizing: border-box;
 }
 
 .div-projects {
@@ -465,7 +465,7 @@ header {
   width: 90%;
   margin-bottom: 20px;
 }
-.project p {
+.project p, .project a {
   font-size: 10px;
 }
 .project .pr-div {
