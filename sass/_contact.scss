@@ -114,7 +114,7 @@
                         .textarea{
                             min-height: 100px;
                             margin-bottom: 2vh;
-                            background-color: red;
+                            // background-color: red;
                             @include breakpoints.display-large{
                                 height: 500px;
                             }
@@ -123,10 +123,15 @@
                     
                     .button{
                         margin: 0;
+                        padding: 8px 16px;
+                        background-color: v.$bg-color;
+                        color: v.$text-color;
                         cursor: pointer;
                         border : 1px solid v.$main-color;
-                        height: 15px;
-                        font-size: 10px;
+                        height: 30px;
+                        @include mixinsfunc.create-flexbox(row, center);
+                        font-size: v.$mobile-h3-font-size;
+                        margin-bottom: 20px;
                         @include breakpoints.display-large{
                             height: 15vh;
                             font-size: max(#{1vw},#{12px});

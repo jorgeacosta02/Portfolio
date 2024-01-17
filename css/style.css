@@ -740,7 +740,6 @@ header {
 .contact .div-contacts .links .link-div .form .form-block .textarea {
   min-height: 100px;
   margin-bottom: 2vh;
-  background-color: red;
 }
 @media only screen and (min-width: 576px) {
   .contact .div-contacts .links .link-div .form .form-block .textarea {
@@ -749,10 +748,18 @@ header {
 }
 .contact .div-contacts .links .link-div .form .button {
   margin: 0;
+  padding: 8px 16px;
+  background-color: #121212;
+  color: #fff;
   cursor: pointer;
   border: 1px solid rgb(255, 39, 39);
-  height: 15px;
-  font-size: 10px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: max(12px, 2.2vw);
+  margin-bottom: 20px;
 }
 @media only screen and (min-width: 576px) {
   .contact .div-contacts .links .link-div .form .button {
