@@ -410,6 +410,7 @@ header {
 }
 .projects .div-projects {
   top: 10px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -440,7 +441,7 @@ header {
 @media only screen and (min-width: 576px) {
   .projects .div-projects .project {
     height: 75vh;
-    width: 35vw;
+    width: 25vw;
     border-radius: 10px;
     box-sizing: border-box;
     border: none;
@@ -469,7 +470,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  width: 100%;
+  width: 96vw;
   height: 70px;
   margin-bottom: 10px;
 }
@@ -494,7 +495,8 @@ header {
 }
 @media only screen and (min-width: 576px) {
   .projects .div-projects .project .pr-div .video-img {
-    width: 100%;
+    width: 25%;
+    max-width: 100%;
   }
 }
 .projects .div-projects .project .pr-div .craft-img {
@@ -503,7 +505,8 @@ header {
 }
 @media only screen and (min-width: 576px) {
   .projects .div-projects .project .pr-div .craft-img {
-    width: 50%;
+    width: 17%;
+    max-width: 200px;
   }
 }
 .projects .div-projects .project .pr-div .explo-img {
@@ -514,7 +517,8 @@ header {
 }
 @media only screen and (min-width: 576px) {
   .projects .div-projects .project .pr-div .explo-img {
-    width: 90%;
+    width: 25%;
+    max-width: 100%;
   }
 }
 
@@ -555,6 +559,7 @@ header {
   justify-content: space-evenly;
   align-items: center;
   height: 25vh;
+  width: 100%;
   font-size: 10px;
   margin-bottom: 8px;
 }
@@ -608,7 +613,8 @@ header {
 
 .contact {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  justify-content: center;
 }
 .contact .div-contacts {
   position: relative;
@@ -648,6 +654,84 @@ header {
     border: 1px solid rgb(79, 79, 79);
   }
 }
+.contact .div-contacts .links .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 0.2px;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 576px) {
+  .contact .div-contacts .links .form {
+    height: 100%;
+    gap: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+.contact .div-contacts .links .form .form-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: max(11px, 2.2vw);
+}
+@media only screen and (min-width: 576px) {
+  .contact .div-contacts .links .form .form-block {
+    font-size: 3vh;
+  }
+}
+.contact .div-contacts .links .form .form-block .form-in {
+  box-sizing: border-box;
+  font-size: max(11px, 2.2vw);
+  width: 100%;
+  height: 5vh;
+  border-radius: 5px;
+  border: 1px solid rgb(79, 79, 79);
+  background-color: #121212;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media only screen and (min-width: 576px) {
+  .contact .div-contacts .links .form .form-block .form-in {
+    font-size: 0.8rem;
+  }
+}
+.contact .div-contacts .links .form .form-block .textarea {
+  min-height: 100px;
+  margin-bottom: 2vh;
+}
+@media only screen and (min-width: 576px) {
+  .contact .div-contacts .links .form .form-block .textarea {
+    height: 10vh;
+    min-height: 30px;
+  }
+}
+.contact .div-contacts .links .form .button {
+  margin: 0;
+  padding: 8px 16px;
+  background-color: #121212;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid rgb(255, 39, 39);
+  border-radius: 5px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: max(12px, 2.2vw);
+}
+@media only screen and (min-width: 576px) {
+  .contact .div-contacts .links .form .button {
+    height: 5vh;
+    width: 30%;
+    font-size: min(12px, 3.5vw);
+  }
+}
 .contact .div-contacts .links .link-title {
   font-size: 8px;
   margin-bottom: 8px;
@@ -657,7 +741,7 @@ header {
     width: 80%;
     text-align: center;
     margin-bottom: 2%;
-    font-size: 3vh;
+    font-size: 38px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -675,6 +759,11 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (min-width: 576px) {
+  .contact .div-contacts .links .link-div {
+    padding: 10vh 0;
+  }
+}
 .contact .div-contacts .links .link-div .link-button {
   height: 20%;
   width: 100%;
@@ -691,9 +780,12 @@ header {
   height: 80%;
   top: 10%;
 }
+.contact .div-contacts .links .link-div .link-button .yahoo-p {
+  font-size: calc(max(11px, 2.2vw) * 0.65);
+}
 @media only screen and (min-width: 576px) {
   .contact .div-contacts .links .link-div .link-button .yahoo-p {
-    font-size: calc(max(11px, 2.2vw) * 1);
+    font-size: max(1vw, 8px);
   }
 }
 .contact .div-contacts .links .link-div .link-button .github {
@@ -701,82 +793,6 @@ header {
 }
 .contact .div-contacts .links .link-div .link-button .resume-text {
   font-size: max(11px, 2.2vw);
-}
-.contact .div-contacts .links .link-div .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  gap: 0.2px;
-  width: 100%;
-  height: 100%;
-}
-@media only screen and (min-width: 576px) {
-  .contact .div-contacts .links .link-div .form {
-    height: 100%;
-    gap: 0.5rem;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-}
-.contact .div-contacts .links .link-div .form .form-block {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  font-size: max(11px, 2.2vw);
-}
-@media only screen and (min-width: 576px) {
-  .contact .div-contacts .links .link-div .form .form-block {
-    font-size: 3vh;
-  }
-}
-.contact .div-contacts .links .link-div .form .form-block .form-in {
-  box-sizing: border-box;
-  font-size: max(11px, 2.2vw);
-  width: 100%;
-  height: 5vh;
-  border-radius: 5px;
-  border: 1px solid rgb(79, 79, 79);
-  background-color: #121212;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-}
-@media only screen and (min-width: 576px) {
-  .contact .div-contacts .links .link-div .form .form-block .form-in {
-    font-size: 0.8rem;
-  }
-}
-.contact .div-contacts .links .link-div .form .form-block .textarea {
-  min-height: 100px;
-  margin-bottom: 2vh;
-}
-@media only screen and (min-width: 576px) {
-  .contact .div-contacts .links .link-div .form .form-block .textarea {
-    height: 500px;
-  }
-}
-.contact .div-contacts .links .link-div .form .button {
-  margin: 0;
-  padding: 8px 16px;
-  background-color: #121212;
-  color: #fff;
-  cursor: pointer;
-  border: 1px solid rgb(255, 39, 39);
-  height: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: max(12px, 2.2vw);
-  margin-bottom: 20px;
-}
-@media only screen and (min-width: 576px) {
-  .contact .div-contacts .links .link-div .form .button {
-    height: 15vh;
-    font-size: max(1vw, 12px);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

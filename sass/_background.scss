@@ -33,6 +33,7 @@
 .backgr{
     @include mixinsfunc.create-flexbox(column, space-evenly);
     height: 25vh;
+    width: 100%;
     font-size: 10px;
     margin-bottom: 8px;
     .bg-div{
