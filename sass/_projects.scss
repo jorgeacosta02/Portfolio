@@ -5,16 +5,12 @@
 
 
 .projects{
-    position: relative;
-    margin-top: 80px;
+    margin-top: 50px;
     width: 100%;
     flex-direction: column;
-    box-sizing: border-box;
     .div-projects{
-        position: relative;
         top: 10px;
         @include mixinsfunc.create-flexbox(column, space-evenly);
-        height: 80vh;
         gap: 1rem;
         @include breakpoints.display-large{
             flex-direction: row;
@@ -44,7 +40,6 @@
                 gap: 10px;
                 width: 100%;
                 height: 70px;
-                // background-color: red;
                 margin-bottom: 10px;
                 @include breakpoints.display-large{
                     flex-direction: column;

@@ -1,12 +1,14 @@
-@use "variables";
-@use "mixinsfunc";
-@use "general";
-@use "breakpoints";
+@use 'variables' as v;
+@use 'mixinsfunc';
+@use 'general';
+@use 'breakpoints';
 
 
 .background{
     position: relative;
-    height: 100vh;
+    // top: calc(v.$mobile-NavBar-height + 50px); 
+    padding-top: calc(v.$mobile-NavBar-height + 30px);
+    flex-direction: column;
     width: 100%;
 }
 
@@ -14,6 +16,7 @@
     @include mixinsfunc.create-flexbox(column, space-evenly);
     width: 90vw;
     font-size: 10px;
+    gap: 1rem;
     img{
         height: 10vh;
         width: auto;
@@ -36,9 +39,10 @@
     .bg-div{
         @include mixinsfunc.create-flexbox(row, space-between);
         width: 100%;
-        margin-bottom: 2px;
+        gap: 10px;
+        margin-bottom: 10px;
         h2{
-            font-size: 12px;
+            font-size: v.$mobile-h2-font-size;
             text-align: left;
         }
     }
