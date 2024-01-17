@@ -318,8 +318,7 @@ header {
     align-items: flex-start;
   }
 }
-
-.about-text {
+.about .about-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -329,7 +328,7 @@ header {
   gap: 0.1rem;
 }
 @media only screen and (min-width: 576px) {
-  .about-text {
+  .about .about-text {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2%;
@@ -338,24 +337,22 @@ header {
     gap: 1rem;
   }
 }
-
-.about-img {
+.about .about-text .about-img {
   display: none;
 }
 @media only screen and (min-width: 576px) {
-  .about-img {
+  .about .about-text .about-img {
     display: inline-block;
     height: 60%;
     width: auto;
     border-radius: 50%;
   }
 }
-
-.about-data {
+.about .about-text .about-data {
   line-height: 0.5;
 }
 @media only screen and (min-width: 576px) {
-  .about-data {
+  .about .about-text .about-data {
     height: 100%;
     width: 100%;
     display: flex;
@@ -365,25 +362,19 @@ header {
     align-items: flex-start;
   }
 }
-
-.about-text h2 {
-  font-size: 3rem;
-}
-
-.about-text h4 {
+.about .about-text .about-data h4 {
   font-size: 20px;
   font-weight: 600;
   color: 3rem;
   line-height: 1.7;
 }
-
-.about-text p {
-  font-size: 15px;
+.about .about-text .about-data p {
+  font-size: max(11px, 2.2vw);
   line-height: 1.5;
   margin-top: 5px;
 }
 @media only screen and (min-width: 576px) {
-  .about-text p {
+  .about .about-text .about-data p {
     color: #ccc;
     font-size: 2.8vh;
     line-height: 4vh;
@@ -433,8 +424,7 @@ header {
   flex-direction: column;
   box-sizing: border-box;
 }
-
-.div-projects {
+.projects .div-projects {
   position: relative;
   top: 10px;
   display: flex;
@@ -445,7 +435,7 @@ header {
   gap: 1rem;
 }
 @media only screen and (min-width: 576px) {
-  .div-projects {
+  .projects .div-projects {
     flex-direction: row;
     position: relative;
     gap: 4rem;
@@ -455,8 +445,7 @@ header {
     top: 0;
   }
 }
-
-.project {
+.projects .div-projects .project {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -465,35 +454,30 @@ header {
   width: 90%;
   margin-bottom: 20px;
 }
-.project p, .project a {
+.projects .div-projects .project p, .projects .div-projects .project a {
   font-size: 10px;
 }
-.project .pr-div {
+.projects .div-projects .project .pr-div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: red;
+}
+.projects .div-projects .project .pr-div h2 {
+  font-size: max(15px, 3vw);
   text-align: left;
 }
-.project .pr-div a {
-  color: rgb(255, 39, 39);
-}
-.project .pr-div h2 {
-  font-size: 12px;
-}
-.project .pr-div .div-img {
-  width: 40vw;
-}
-.project .pr-div .div-img .video-img {
+.projects .div-projects .project .pr-div .video-img {
   width: 100%;
-  height: auto;
 }
-.project .pr-div .div-img .craft-img {
-  width: 50%;
+.projects .div-projects .project .pr-div .craft-img {
+  width: 70px;
   height: auto;
+  background-color: blue;
 }
-.project .pr-div .div-img .explo-img {
+.projects .div-projects .project .pr-div .explo-img {
   background-color: white;
   padding: 1vw;
   width: 80%;
@@ -501,7 +485,7 @@ header {
   height: auto;
 }
 @media only screen and (min-width: 576px) {
-  .project {
+  .projects .div-projects .project {
     height: 75vh;
     width: 35vw;
     border-radius: 10px;
@@ -509,22 +493,22 @@ header {
     border: none;
     font-size: min(2vw, 1rem);
   }
-  .project .pr-div {
+  .projects .div-projects .project .pr-div {
     flex-direction: column;
     text-align: center;
   }
-  .project .pr-div h2 {
+  .projects .div-projects .project .pr-div h2 {
     margin-bottom: 5%;
   }
-  .project .pr-div .div-img {
+  .projects .div-projects .project .pr-div .div-img {
     height: 27vh;
     width: 100%;
   }
-  .project .pr-div .div-img .craft-img {
+  .projects .div-projects .project .pr-div .div-img .craft-img {
     width: auto;
     height: 100%;
   }
-  .project .pr-div .div-img .video-img {
+  .projects .div-projects .project .pr-div .div-img .video-img {
     width: auto;
     max-width: 100%;
     height: 100%;

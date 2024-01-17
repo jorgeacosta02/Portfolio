@@ -1,7 +1,7 @@
-@use "variables";
-@use "mixinsfunc";
-@use "general";
-@use "breakpoints";
+@use 'variables' as v;
+@use 'mixinsfunc';
+@use 'general';
+@use 'breakpoints';
 
 
 .projects{
@@ -10,95 +10,87 @@
     width: 100%;
     flex-direction: column;
     box-sizing: border-box;
-    // height: 200vh;
-    // background-color: red
-}
-
-.div-projects{
-    position: relative;
-    top: 10px;
-    @include mixinsfunc.create-flexbox(column, space-evenly);
-    height: 80vh;
-    gap: 1rem;
-    @include breakpoints.display-large{
-        flex-direction: row;
+    .div-projects{
         position: relative;
-        gap: 4rem;
-        width: 80vw;
+        top: 10px;
+        @include mixinsfunc.create-flexbox(column, space-evenly);
         height: 80vh;
-        font-size: max(#{1vw}, #{10px});
-        top: 0;
-    }
-}
-
-.project{
-    @include mixinsfunc.create-flexbox(column, space-between);
-    font-size: 15px;
-    // height: 35vh;
-    width: 90%;
-    margin-bottom: 20px;
-    p,a{
-        font-size: 10px
-    }
-    .pr-div{
-        a{
-            color: variables.$main-color;
-        }
-        h2{
-            font-size: 12px;
+        gap: 1rem;
+        @include breakpoints.display-large{
+            flex-direction: row;
+            position: relative;
+            gap: 4rem;
+            width: 80vw;
+            height: 80vh;
+            font-size: max(#{1vw}, #{10px});
+            top: 0;
         }
         
-        @include mixinsfunc.create-flexbox(row, space-between);
-        width: 100%;
-        text-align: left;
-        .div-img{
-            width: 40vw;
-            .video-img{
+        .project{
+            @include mixinsfunc.create-flexbox(column, space-between);
+            font-size: 15px;
+            width: 90%;
+            margin-bottom: 20px;
+            p,a{
+                font-size: 10px
+            }
+            .pr-div{
+                @include mixinsfunc.create-flexbox(row, space-between);
                 width: 100%;
-                height: auto;
-            }
-            .craft-img{
-                width: 50%;
-                height: auto;
-                
-            }
-            .explo-img{
-                background-color: white;
-                padding: 1vw;
-                width: 80%;
-                min-width: 70px;
-                height: auto;
-
-            }
-        }
-    }
-    @include breakpoints.display-large{
-        height: 75vh;
-        width: 35vw;
-        border-radius: 10px;
-        box-sizing: border-box;
-        border: none;
-        font-size: min(#{2vw},#{1rem});
-        .pr-div{
-            flex-direction: column;
-            text-align: center;
-            h2{
-                margin-bottom: 5%;
-            }
-            .div-img{
-                height: 27vh;
-                width: 100%;
-                .craft-img{
-                    width: auto;
-                    height: 100%;
+                background-color: red;
+                h2{
+                    font-size: v.$mobile-h2-font-size;
+                    text-align: left;
                 }
-                .video-img{
-                    width: auto;
-                    max-width: 100%;
-                    height: 100%;
+                // .div-img{
+                //     width: 40vw;
+                    .video-img{
+                        width: 100%;
+                        // height: auto;
+                    }
+                    .craft-img{
+                        width: 70px;
+                        height: auto;
+                        background-color: blue;
+                    }
+                    .explo-img{
+                        background-color: white;
+                        padding: 1vw;
+                        width: 80%;
+                        min-width: 70px;
+                        height: auto;
+                        
+                    }
+                // }
+            }
+            @include breakpoints.display-large{
+                height: 75vh;
+                width: 35vw;
+                border-radius: 10px;
+                box-sizing: border-box;
+                border: none;
+                font-size: min(#{2vw},#{1rem});
+                .pr-div{
+                    flex-direction: column;
+                    text-align: center;
+                    h2{
+                        margin-bottom: 5%;
+                    }
+                    .div-img{
+                        height: 27vh;
+                        width: 100%;
+                        .craft-img{
+                            width: auto;
+                            height: 100%;
+                        }
+                        .video-img{
+                            width: auto;
+                            max-width: 100%;
+                            height: 100%;
+                        }
+                    }
                 }
             }
         }
     }
 }
-
