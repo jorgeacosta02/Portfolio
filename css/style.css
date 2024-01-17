@@ -454,7 +454,11 @@ header {
   width: 90%;
   margin-bottom: 20px;
 }
-.projects .div-projects .project p, .projects .div-projects .project a {
+.projects .div-projects .project p {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+.projects .div-projects .project a {
   font-size: 10px;
 }
 .projects .div-projects .project .pr-div {
@@ -465,8 +469,13 @@ header {
   gap: 10px;
   width: 100%;
   height: 70px;
-  background-color: red;
   margin-bottom: 10px;
+}
+@media only screen and (min-width: 576px) {
+  .projects .div-projects .project .pr-div {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .projects .div-projects .project .pr-div h2 {
   font-size: max(15px, 3vw);
@@ -474,6 +483,13 @@ header {
 }
 .projects .div-projects .project .pr-div .video-img {
   width: 40%;
+}
+@media only screen and (min-width: 576px) {
+  .projects .div-projects .project .pr-div .video-img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+  }
 }
 .projects .div-projects .project .pr-div .craft-img {
   width: 70px;
@@ -484,6 +500,7 @@ header {
   background-color: white;
   width: 130px;
   min-width: 70px;
+  padding: 2px;
 }
 @media only screen and (min-width: 576px) {
   .projects .div-projects .project {
@@ -493,26 +510,6 @@ header {
     box-sizing: border-box;
     border: none;
     font-size: min(2vw, 1rem);
-  }
-  .projects .div-projects .project .pr-div {
-    flex-direction: column;
-    text-align: center;
-  }
-  .projects .div-projects .project .pr-div h2 {
-    margin-bottom: 5%;
-  }
-  .projects .div-projects .project .pr-div .div-img {
-    height: 27vh;
-    width: 100%;
-  }
-  .projects .div-projects .project .pr-div .div-img .craft-img {
-    width: auto;
-    height: 100%;
-  }
-  .projects .div-projects .project .pr-div .div-img .video-img {
-    width: auto;
-    max-width: 100%;
-    height: 100%;
   }
 }
 

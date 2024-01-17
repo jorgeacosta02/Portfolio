@@ -31,7 +31,12 @@
             font-size: 15px;
             width: 90%;
             margin-bottom: 20px;
-            p,a{
+            p{
+                font-size: 10px;
+                margin-bottom: 10px;
+            }
+            
+            a{
                 font-size: 10px
             }
             .pr-div{
@@ -39,14 +44,23 @@
                 gap: 10px;
                 width: 100%;
                 height: 70px;
-                background-color: red;
+                // background-color: red;
                 margin-bottom: 10px;
+                @include breakpoints.display-large{
+                    flex-direction: column;
+                    text-align: center;
+                }
                 h2{
                     font-size: v.$mobile-h2-font-size;
                     text-align: left;
                 }
                 .video-img{
                     width: 40%;
+                    @include breakpoints.display-large{
+                        width: auto;
+                        max-width: 100%;
+                        height: 100%;
+                    }
                 }
                 .craft-img{
                     width: 70px;
@@ -56,7 +70,8 @@
                 .explo-img{
                     background-color: white;
                     width: 130px;
-                    min-width: 70px;                        
+                    min-width: 70px;  
+                    padding: 2px;                      
                 }
             }
             @include breakpoints.display-large{
@@ -66,26 +81,7 @@
                 box-sizing: border-box;
                 border: none;
                 font-size: min(#{2vw},#{1rem});
-                .pr-div{
-                    flex-direction: column;
-                    text-align: center;
-                    h2{
-                        margin-bottom: 5%;
-                    }
-                    .div-img{
-                        height: 27vh;
-                        width: 100%;
-                        .craft-img{
-                            width: auto;
-                            height: 100%;
-                        }
-                        .video-img{
-                            width: auto;
-                            max-width: 100%;
-                            height: 100%;
-                        }
-                    }
-                }
+
             }
         }
     }
