@@ -49,11 +49,9 @@
                     width: 100%;
                     @include mixinsfunc.create-flexbox(column, space-between);
                     font-size: v.$mobile-p-font-size;
-                    // height: 50%;
                     @include breakpoints.display-large{
                         font-size: 3vh;
                     }
-                    
                     .form-in{
                         box-sizing: border-box;
                         font-size: v.$mobile-p-font-size;
@@ -71,15 +69,12 @@
                     .textarea{
                         min-height: 100px;
                         margin-bottom: 2vh;
-                        // background-color: red;
                         @include breakpoints.display-large{
                             height: 10vh;
                             min-height: 30px;
-                            // background-color: blue;
                         }
                     }
                 }
-                
                 .button{
                     margin: 0;
                     padding: 8px 16px;
@@ -91,12 +86,15 @@
                     height: 30px;
                     @include mixinsfunc.create-flexbox(row, center);
                     font-size: v.$mobile-h3-font-size;
-                    // margin-bottom: 20px;
                     @include breakpoints.display-large{
                         height: 5vh;
                         width: 30%;
                         font-size: v.$desk-p-font-size;
                     }
+                }
+                .button:hover{
+                    background-color: v.$main-color;
+                    border-color: v.$grey-color;
                 }
             }
             .link-title{
@@ -118,7 +116,6 @@
                 width: 80%;
                 @include mixinsfunc.create-flexbox(column, space-between);
                 @include breakpoints.display-large{
-                    // box-sizing: border-box;
                     padding: 10vh 0;
                 };
                 .link-button{
@@ -129,7 +126,6 @@
                     cursor: pointer;
                     border: 1px solid v.$grey-color;
                     font-size: calc(v.$mobile-p-font-size * .65);
-                    // background-color: blue;
                     img{
                         height: 80%;
                         top: 10%;
@@ -147,7 +143,6 @@
                         font-size: v.$mobile-p-font-size;
                     }
                 }
-                
             }
         }
     }
